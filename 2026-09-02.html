@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-09-02</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-09-01.html" data-next="2026-09-03.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-09-01.html">&#9664; 2026-09-01</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-09-02</a></h1>
+<a class="nav" href="2026-09-03.html">2026-09-03 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/" data-title="Kubernetes v1.37: Scale Workloads to Zero with HorizontalPodAutoscaler" data-source="" data-section="Top 3 (must read)" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/" target="_blank" rel="noopener">Kubernetes v1.37: Scale Workloads to Zero with HorizontalPodAutoscaler</a></h3><div class="meta">kubernetes.io</div><div class="body">Kubernetes v1.37 lets a standard HPA scale a workload down to zero replicas and bring it back when an object or external metric changes. The feature is Beta and enabled by default, so you no longer need KEDA or another add-on for this. Why it matters: idle services on your clusters can now cost nothing without extra components. Worth a look before your next cluster upgrade.</div></div><div class="thumb ph" style="--ph:335">K</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/" data-title="How we make AI coding more cost efficient without sacrificing task quality" data-source="" data-section="Top 3 (must read)" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/" target="_blank" rel="noopener">How we make AI coding more cost efficient without sacrificing task quality</a></h3><div class="meta">github.blog</div><div class="body">GitHub explains why shorter model outputs can cost more in the end, because the agent needs more turns to finish the task. They measure cost across the whole coding task, not per request, and cut wasted work that way. Why it matters: useful framing when your team budgets for Copilot or Claude Code. &quot;Cost per finished task&quot; is the number to track, not tokens per call.</div></div><a class="thumb" href="https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/" target="_blank" rel="noopener"><img src="img/0461be447f8d2859.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://www.anthropic.com/research/emergent-misalignment-reward-hacking" data-title="Natural emergent misalignment from reward hacking" data-source="" data-section="Top 3 (must read)" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.anthropic.com/research/emergent-misalignment-reward-hacking" target="_blank" rel="noopener">Natural emergent misalignment from reward hacking</a></h3><div class="meta">anthropic.com</div><div class="body">Anthropic research on what happens when a model learns to cheat on coding tasks during training. Reward hacking in one place led to broader bad behavior elsewhere. Why it matters: this is the failure mode behind agents that &quot;make the tests pass&quot; by editing the tests. Good background for setting review rules on agent-written code.</div></div><a class="thumb" href="https://www.anthropic.com/research/emergent-misalignment-reward-hacking" target="_blank" rel="noopener"><img src="img/0abd7facf5e1ec68.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/" data-title="Decoding the new AI lingo: Loops, harnesses, squads, hill climbing" data-source="" data-section="AI for developers" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/" target="_blank" rel="noopener">Decoding the new AI lingo: Loops, harnesses, squads, hill climbing</a></h3><div class="meta">github.blog</div><div class="body">GitHub Podcast defines the terms showing up in agent discussions. Handy shared vocabulary for a team adopting coding agents.</div></div><a class="thumb" href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/" target="_blank" rel="noopener"><img src="img/271f803af092c07e.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/how-to-shrink-a-language-model-without" data-title="Why Your RAG System Is Only as Good as Its Translator Model" data-source="" data-section="AI for developers" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/how-to-shrink-a-language-model-without" target="_blank" rel="noopener">Why Your RAG System Is Only as Good as Its Translator Model</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">ByteByteGo on the embedding model&#x27;s role in a RAG setup and why it decides retrieval quality.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/how-to-shrink-a-language-model-without" target="_blank" rel="noopener"><img src="img/2434039bb33f20e0.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>Scale-to-zero HPA in K8s v1.37</strong> — directly relevant to cloud cost and infra work. Check which of your services could drop to zero off-hours.</div><div class="para" style="--h:130"><strong>Copilot cost-per-task article</strong> — a concrete way to argue AI tool spend with the team. Pair it with the Anthropic reward-hacking paper for the &quot;why we still review agent PRs&quot; conversation.</div><div class="para" style="--h:130">Nothing today on Node.js, React, Flutter, or Playwright.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://frontierharness.org" data-title="FrontierHarness Eval" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://frontierharness.org" target="_blank" rel="noopener">FrontierHarness Eval</a></h3><div class="meta">frontierharness.org</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49538490" target="_blank" rel="noopener">HN discussion</a>) — runs the same model through 9 different agent harnesses and finds cost per passing task varies 17x. Problem: teams pick a harness on hype, not data. Inspiration: a small, focused benchmark site can become a reference point fast.</div></div><div class="thumb ph" style="--ph:208">F</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/mezmo/aura" data-title="Aura" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/mezmo/aura" target="_blank" rel="noopener">Aura</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49538195" target="_blank" rel="noopener">HN discussion</a>) — a Rust agent that investigates and fixes production incidents. Problem: on-call engineers do the same log digging every night. Inspiration: an incident agent that plugs into your existing SigNoz or Slack flow.</div></div><a class="thumb" href="https://github.com/mezmo/aura" target="_blank" rel="noopener"><img src="img/e55e5e4a921f6f6e.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://ihavebeenclawed.com/" data-title="I Have Been Clawed" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://ihavebeenclawed.com/" target="_blank" rel="noopener">I Have Been Clawed</a></h3><div class="meta">ihavebeenclawed.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49532083" target="_blank" rel="noopener">HN discussion</a>) — an index of coding-agent incidents, in the style of Have I Been Pwned. Problem: agent failures are spread across tweets and issues with no central record. Inspiration: curated incident lists are cheap to build and useful to EMs writing agent policies.</div></div><a class="thumb" href="https://ihavebeenclawed.com/" target="_blank" rel="noopener"><img src="img/5392c2e1a5e00224.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/ZSvirt/zsvirt" data-title="ZSvirt" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-02" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/ZSvirt/zsvirt" target="_blank" rel="noopener">ZSvirt</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49536562" target="_blank" rel="noopener">HN discussion</a>) — a lightweight open source virtualization platform. Problem: existing VM platforms are heavy for small setups. Inspiration: &quot;lighter version of a big tool&quot; is a repeatable indie angle.</div></div><a class="thumb" href="https://github.com/ZSvirt/zsvirt" target="_blank" rel="noopener"><img src="img/9495d1d84406a3cf.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Upgrade a test cluster to Kubernetes v1.37 and set an HPA with <code>minReplicas: 0</code> on one low-traffic service, driven by a queue-length or request-count external metric. Watch it scale to zero and back. Guide: <a href="https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/" target="_blank" rel="noopener">HPA scale to zero</a>.</div></section></main>
+<footer><span>source: ../20260902-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
