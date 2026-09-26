@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- e-ink app icon: off-white paper, hard ink frame, a white rabbit (ink
+       silhouette with a paper eye) -->
+  <rect width="512" height="512" fill="#f3f2ec"/>
+  <rect x="24" y="24" width="464" height="464" fill="none" stroke="#111111" stroke-width="20"/>
+  <g fill="#111111" stroke="none">
+    <ellipse cx="206" cy="150" rx="34" ry="96" transform="rotate(-11 206 150)"/>
+    <ellipse cx="300" cy="142" rx="34" ry="98" transform="rotate(11 300 142)"/>
+    <circle cx="252" cy="266" r="80"/>
+    <ellipse cx="262" cy="372" rx="116" ry="92"/>
+    <circle cx="364" cy="384" r="28"/>
+    <circle cx="228" cy="256" r="13" fill="#f3f2ec"/>
+  </g>
+</svg>

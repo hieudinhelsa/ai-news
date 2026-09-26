@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-08-19</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-08-18.html" data-next="2026-08-20.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-08-18.html">&#9664; 2026-08-18</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-08-19</a></h1>
+<a class="nav" href="2026-08-20.html">2026-08-20 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion" data-title="Claude Code May–August 2026 weekly limits promotion" data-source="" data-section="Top 3 (must read)" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion" target="_blank" rel="noopener">Claude Code May–August 2026 weekly limits promotion</a></h3><div class="meta">support.claude.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49348751" target="_blank" rel="noopener">HN discussion</a>, 262 points) — Anthropic is running a promotion that changes the weekly usage limits for Claude Code through August. The HN thread has a lot of real-world detail on how people hit the limits and plan around them. You use Claude Code daily, so this directly changes how much you can run agents this month.</div></div><a class="thumb" href="https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion" target="_blank" rel="noopener"><img src="img/1e907c1ba3f51440.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/" data-title="Mojo🔥 is now open source" data-source="" data-section="Top 3 (must read)" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/" target="_blank" rel="noopener">Mojo🔥 is now open source</a></h3><div class="meta">simonwillison.net</div><div class="body">Modular shipped Mojo 1.0 last week and has now released the compiler and toolchain as open source, keeping a promise made in May 2023. This is the biggest language news of the day. It matters even outside your stack: an open compiler means the ecosystem (tooling, CI, packages) can now grow the way other languages did.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/mryadavgulshan/the-ai-agent-stack-in-2026-frameworks-memory-orchestration-3n02" data-title="The AI Agent Stack in 2026: Frameworks, Memory, Orchestration" data-source="" data-section="Top 3 (must read)" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/mryadavgulshan/the-ai-agent-stack-in-2026-frameworks-memory-orchestration-3n02" target="_blank" rel="noopener">The AI Agent Stack in 2026: Frameworks, Memory, Orchestration</a></h3><div class="meta">dev.to</div><div class="body">A practical breakdown of what an agent system is made of: the framework layer matters less than the memory and orchestration layers around it. Useful for you as an EM: it gives a simple map for team discussions about &quot;which agent framework do we bet on&quot; — and argues that question is the wrong one.</div></div><a class="thumb" href="https://dev.to/mryadavgulshan/the-ai-agent-stack-in-2026-frameworks-memory-orchestration-3n02" target="_blank" rel="noopener"><img src="img/98abe40d4e35f86e.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/xuanyi/the-cheapest-llm-call-is-the-one-you-dont-make-a-caching-layer-that-actually-pays-off-59e" data-title="The cheapest LLM call is the one you don&#x27;t make" data-source="" data-section="AI for developers" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/xuanyi/the-cheapest-llm-call-is-the-one-you-dont-make-a-caching-layer-that-actually-pays-off-59e" target="_blank" rel="noopener">The cheapest LLM call is the one you don&#x27;t make</a></h3><div class="meta">dev.to</div><div class="body">a team&#x27;s write-up on adding a caching layer for LLM calls after provider routing already cut their bill ~40%. Caching turned out to be the bigger, less flashy cost lever.</div></div><a class="thumb" href="https://dev.to/xuanyi/the-cheapest-llm-call-is-the-one-you-dont-make-a-caching-layer-that-actually-pays-off-59e" target="_blank" rel="noopener"><img src="img/c0f153b8c4c77b1b.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://cdn.kuber.studio/chat/hp-laser-1008a-driver" data-title="Claude Code teaching macOS to natively print to the HP Laser 1008a" data-source="" data-section="AI for developers" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://cdn.kuber.studio/chat/hp-laser-1008a-driver" target="_blank" rel="noopener">Claude Code teaching macOS to natively print to the HP Laser 1008a</a></h3><div class="meta">cdn.kuber.studio</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49352806" target="_blank" rel="noopener">HN</a>) — someone used Claude Code to write a working macOS printer driver for an unsupported printer. A good concrete example of agents doing low-level work that used to need a specialist.</div></div><a class="thumb" href="https://cdn.kuber.studio/chat/hp-laser-1008a-driver" target="_blank" rel="noopener"><img src="img/f37f0d787656da56.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://status.claude.com/incidents/q7txxvbsftgq" data-title="Degraded performance for multiple Claude models" data-source="" data-section="AI for developers" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://status.claude.com/incidents/q7txxvbsftgq" target="_blank" rel="noopener">Degraded performance for multiple Claude models</a></h3><div class="meta">status.claude.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49348163" target="_blank" rel="noopener">HN</a>) — Anthropic had a quality incident across several models. Worth knowing if your team saw odd agent output around this window.</div></div><a class="thumb" href="https://status.claude.com/incidents/q7txxvbsftgq" target="_blank" rel="noopener"><img src="img/c39ef5a33b714d74.png" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/08/18/cloud-native-platform-sovereignty-through-multi-plane-architecture/" data-title="Cloud native platform sovereignty through multi-plane architecture" data-source="" data-section="Engineering &amp; teams" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/08/18/cloud-native-platform-sovereignty-through-multi-plane-architecture/" target="_blank" rel="noopener">Cloud native platform sovereignty through multi-plane architecture</a></h3><div class="meta">cncf.io</div><div class="body">CNCF piece arguing that sovereignty is not just &quot;pick a region&quot;: it is about how control planes and data planes are split across environments. Good system-design reading for your infra interest.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/08/18/cloud-native-platform-sovereignty-through-multi-plane-architecture/" target="_blank" rel="noopener"><img src="img/5ca4d1b0e0974a34.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://dev.to/ashokyadav123/accessible-by-platform-how-ios-and-android-differ-from-the-web-clb" data-title="Accessible by platform: how iOS and Android differ from the web" data-source="" data-section="Engineering &amp; teams" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/ashokyadav123/accessible-by-platform-how-ios-and-android-differ-from-the-web-clb" target="_blank" rel="noopener">Accessible by platform: how iOS and Android differ from the web</a></h3><div class="meta">dev.to</div><div class="body">WCAG was written for web pages; native apps rewrite the mechanics. If your accessibility checklist assumes one rulebook covers web and mobile, you are shipping hidden compliance debt.</div></div><a class="thumb" href="https://dev.to/ashokyadav123/accessible-by-platform-how-ios-and-android-differ-from-the-web-clb" target="_blank" rel="noopener"><img src="img/41a770bfa4f740a5.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130">The <strong>Claude Code limits promotion</strong> is the most direct hit today — check it before planning heavy agent runs this month.</div><div class="para" style="--h:130">The <strong>accessibility by platform</strong> article maps well to your web + Flutter split: one team, two different accessibility rulebooks.</div><div class="para" style="--h:130">The <strong>AI Agent Stack</strong> piece is a good share-out for your team&#x27;s AI adoption discussions.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vrx6cw/laid_off_last_year_spent_it_building_an_ios_sound/" data-title="Luten — iOS soundscape app built after a layoff" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vrx6cw/laid_off_last_year_spent_it_building_an_ios_sound/" target="_blank" rel="noopener">Luten — iOS soundscape app built after a layoff</a></h3><div class="meta">reddit.com</div><div class="body">you type how you feel in plain words, it picks a soundscape, and it learns from what you finish vs skip. Text classification runs on-device with Apple&#x27;s NaturalLanguage framework, so nothing leaves the phone. Nice pattern: privacy as the core feature, and learning from behavior instead of asking for ratings.</div></div><a class="thumb" href="https://www.reddit.com/r/SideProject/comments/1vrx6cw/laid_off_last_year_spent_it_building_an_ios_sound/" target="_blank" rel="noopener"><img src="img/7e5fa64e8002dbef.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vrx6ge/interactive_map_of_run_clubs/" data-title="Interactive map of run clubs" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vrx6ge/interactive_map_of_run_clubs/" target="_blank" rel="noopener">Interactive map of run clubs</a></h3><div class="meta">reddit.com</div><div class="body">two friends could not find run clubs near them, so they built a map. Classic idea shape: a real local-discovery gap, solved with a simple map UI. The same shape works for many hobby communities.</div></div><a class="thumb" href="https://www.reddit.com/r/SideProject/comments/1vrx6ge/interactive_map_of_run_clubs/" target="_blank" rel="noopener"><img src="img/5d9970a2c4cf26e2.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vros67/i_spent_78_months_building_for_an_audience_that/" data-title="7-8 months building for an audience with no money: 10k visitors, 900 signups, 0 paying" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vros67/i_spent_78_months_building_for_an_audience_that/" target="_blank" rel="noopener">7-8 months building for an audience with no money: 10k visitors, 900 signups, 0 paying</a></h3><div class="meta">reddit.com</div><div class="body">a hard lesson worth collecting: traffic and signups mean nothing if the audience cannot pay. Validate willingness to pay before building for months.</div></div><a class="thumb" href="https://www.reddit.com/r/SideProject/comments/1vros67/i_spent_78_months_building_for_an_audience_that/" target="_blank" rel="noopener"><img src="img/7f62f5e1e1abc68f.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/therepanic/openleetcode" data-title="Openleetcode — local LeetCode runner where tests live in the repo" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/therepanic/openleetcode" target="_blank" rel="noopener">Openleetcode — local LeetCode runner where tests live in the repo</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49347178" target="_blank" rel="noopener">HN</a>) — solves the annoyance of practicing coding problems in a browser: run everything locally, in your own editor, with tests versioned in git. Good example of &quot;take a web-only workflow offline.&quot;</div></div><a class="thumb" href="https://github.com/therepanic/openleetcode" target="_blank" rel="noopener"><img src="img/b3e3f4479ee4352a.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/biw/keychain-store" data-title="keychain-store — macOS data protection keychain for Electron apps" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/biw/keychain-store" target="_blank" rel="noopener">keychain-store — macOS data protection keychain for Electron apps</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49349159" target="_blank" rel="noopener">HN</a>) — fixes a real gap: Electron apps storing secrets less safely than native Mac apps. Small, sharp developer tool aimed at one concrete pain.</div></div><a class="thumb" href="https://github.com/biw/keychain-store" target="_blank" rel="noopener"><img src="img/f0a903183d44deec.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Try the LLM caching approach from <a href="https://dev.to/xuanyi/the-cheapest-llm-call-is-the-one-you-dont-make-a-caching-layer-that-actually-pays-off-59e" target="_blank" rel="noopener">the caching layer that actually pays off</a>: before adding routing or switching providers to cut AI costs, measure how many of your LLM calls are repeats and put a cache in front of them. It is the cheaper lever and you can test it in an afternoon.</div></section></main>
+<footer><span>source: ../20260819-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
