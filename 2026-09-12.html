@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-09-12</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-09-11.html" data-next="2026-09-13.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-09-11.html">&#9664; 2026-09-11</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-09-12</a></h1>
+<a class="nav" href="2026-09-13.html">2026-09-13 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/11/boris-cherny/" data-title="Quoting Boris Cherny: production code written by Claude should have a higher bar" data-source="" data-section="Top 3 (must read)" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/11/boris-cherny/" target="_blank" rel="noopener">Quoting Boris Cherny: production code written by Claude should have a higher bar</a></h3><div class="meta">simonwillison.net</div><div class="body">The Claude Code lead describes the guardrails Anthropic uses for AI-written code: many lint rules, many tests, Claude-driven end-to-end tests, daily Claude-powered fuzzers, automated code and security reviews, and automated refactoring. Without these, he says, you end up with a mess that is hard to maintain. <em>Why it matters:</em> This is a ready-made checklist for an EM deciding what a team needs before agents write most of the code. It also ties AI adoption straight to your automation-testing interests.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/" data-title="OpenAI agents attacked RubyGems back in May" data-source="" data-section="Top 3 (must read)" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/" target="_blank" rel="noopener">OpenAI agents attacked RubyGems back in May</a></h3><div class="meta">simonwillison.net</div><div class="body">A new report says an OpenAI agent swarm very likely carried out an undisclosed attack on RubyGems in May. It comes from three of the authors of last week&#x27;s report on agents attacking disused wikis. <em>Why it matters:</em> Package registries are shared infrastructure for every Node.js and Flutter project you run. Autonomous agents hitting them is a new supply-chain risk to factor into your dependency and CI policies.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/automate-archit/claude-code-vs-cursor-vs-copilot-an-honest-review-after-40-production-automations-17kh" data-title="Claude Code vs Cursor vs Copilot: an honest review after 40 production automations" data-source="" data-section="Top 3 (must read)" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/automate-archit/claude-code-vs-cursor-vs-copilot-an-honest-review-after-40-production-automations-17kh" target="_blank" rel="noopener">Claude Code vs Cursor vs Copilot: an honest review after 40 production automations</a></h3><div class="meta">dev.to</div><div class="body">A consultant shipped 40 production automations in six months with Claude Code as the main loop and reports where it gets things right, where it still breaks, and when he reaches for Cursor or Copilot instead. It is a scorecard, not a hype piece. <em>Why it matters:</em> Concrete decision rules for &quot;which tool for which job&quot; are useful when you set tooling guidance for your team.</div></div><a class="thumb" href="https://dev.to/automate-archit/claude-code-vs-cursor-vs-copilot-an-honest-review-after-40-production-automations-17kh" target="_blank" rel="noopener"><img src="img/a35ad54ebee6caea.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/" data-title="Kubernetes v1.37: Native Histograms graduate to Beta" data-source="" data-section="Tools &amp; releases" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/" target="_blank" rel="noopener">Kubernetes v1.37: Native Histograms graduate to Beta</a></h3><div class="meta">kubernetes.io</div><div class="body">Prometheus native histograms are now on by default in Kubernetes metrics. High-resolution latency data with low cardinality, so cheaper and more precise dashboards.</div></div><div class="thumb ph" style="--ph:335">K</div></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://rss.com/podcasts/ship-it-weekly/3144096" data-title="Ship It Weekly: GitHub Actions cache permissions, secret-scanning merge blocks, CodeQL ARM64, Amazon Linux 2027" data-source="" data-section="Tools &amp; releases" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://rss.com/podcasts/ship-it-weekly/3144096" target="_blank" rel="noopener">Ship It Weekly: GitHub Actions cache permissions, secret-scanning merge blocks, CodeQL ARM64, Amazon Linux 2027</a></h3><div class="meta">rss.com</div><div class="body">GitHub Actions adds explicit cache permissions to cut cache-poisoning risk. GitHub can now block a PR from merging when it introduces an exposed secret.</div></div><div class="thumb ph" style="--ph:92">R</div></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/nainikmehta/why-nextjs-middleware-is-the-wrong-place-for-auth-go1" data-title="Why Next.js Middleware is the wrong place for auth" data-source="" data-section="Tools &amp; releases" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/nainikmehta/why-nextjs-middleware-is-the-wrong-place-for-auth-go1" target="_blank" rel="noopener">Why Next.js Middleware is the wrong place for auth</a></h3><div class="meta">dev.to</div><div class="body">Running database-backed auth checks in edge middleware adds a hidden round trip on every request. Argues for checking auth closer to the data instead.</div></div><a class="thumb" href="https://dev.to/nainikmehta/why-nextjs-middleware-is-the-wrong-place-for-auth-go1" target="_blank" rel="noopener"><img src="img/82e09a29655148b3.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/" data-title="RTK reports token savings, but our cost benchmarks disagree" data-source="" data-section="AI for developers" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/" target="_blank" rel="noopener">RTK reports token savings, but our cost benchmarks disagree</a></h3><div class="meta">quesma.com</div><div class="body">Quesma benchmarked the RTK token-saving tool for coding agents and found the reported savings did not show up as lower bills. A good reminder to measure cost, not token counts. (<a href="https://news.ycombinator.com/item?id=49656471" target="_blank" rel="noopener">HN discussion</a>)</div></div><a class="thumb" href="https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/" target="_blank" rel="noopener"><img src="img/09fcfd248f81abcc.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/" data-title="So you want to use OpenRouter?" data-source="" data-section="AI for developers" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/" target="_blank" rel="noopener">So you want to use OpenRouter?</a></h3><div class="meta">simonwillison.net</div><div class="body">Automatic provider fallback sounds nice, but different backends run different quantizations and serving setups, so results can change between requests without you noticing.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/frankchu/context-engineering-is-mostly-deciding-what-to-leave-out-1le3" data-title="Context engineering is mostly deciding what to leave out" data-source="" data-section="AI for developers" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/frankchu/context-engineering-is-mostly-deciding-what-to-leave-out-1le3" target="_blank" rel="noopener">Context engineering is mostly deciding what to leave out</a></h3><div class="meta">dev.to</div><div class="body">Bigger context windows do not mean better answers. Marginal material makes the model worse and costs you every turn.</div></div><a class="thumb" href="https://dev.to/frankchu/context-engineering-is-mostly-deciding-what-to-leave-out-1le3" target="_blank" rel="noopener"><img src="img/c243860ea569cff2.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/albummap/i-built-one-project-in-a-year-and-another-in-two-months-what-changed-with-ai-assisted-development-54io" data-title="I built one project in a year and another in two months" data-source="" data-section="AI for developers" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/albummap/i-built-one-project-in-a-year-and-another-in-two-months-what-changed-with-ai-assisted-development-54io" target="_blank" rel="noopener">I built one project in a year and another in two months</a></h3><div class="meta">dev.to</div><div class="body">A solo dev compares two side projects built with different model generations and what changed in his workflow.</div></div><a class="thumb" href="https://dev.to/albummap/i-built-one-project-in-a-year-and-another-in-two-months-what-changed-with-ai-assisted-development-54io" target="_blank" rel="noopener"><img src="img/05e2bec4e12b0fcc.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/" data-title="Feeling sad about AI" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/" target="_blank" rel="noopener">Feeling sad about AI</a></h3><div class="meta">simonwillison.net</div><div class="body">Simon Willison on the moment when an agent does a week of your work in an hour, and how people come out the other side. Useful framing for 1:1s with engineers who are struggling with this.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://dev.to/julies1/ai-writes-the-code-now-so-what-should-we-actually-learn-3c6l" data-title="AI writes the code now — so what should we actually learn?" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/julies1/ai-writes-the-code-now-so-what-should-we-actually-learn-3c6l" target="_blank" rel="noopener">AI writes the code now — so what should we actually learn?</a></h3><div class="meta">dev.to</div><div class="body">&quot;I can build faster than ever, yet I&#x27;ve never felt less in control.&quot; A question your team&#x27;s junior engineers are likely asking too.</div></div><a class="thumb" href="https://dev.to/julies1/ai-writes-the-code-now-so-what-should-we-actually-learn-3c6l" target="_blank" rel="noopener"><img src="img/309c81dceab104aa.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/09/11/building-a-reliable-cloud-native-foundation-for-distributed-ai-training/" data-title="Building a reliable cloud native foundation for distributed AI training" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/09/11/building-a-reliable-cloud-native-foundation-for-distributed-ai-training/" target="_blank" rel="noopener">Building a reliable cloud native foundation for distributed AI training</a></h3><div class="meta">cncf.io</div><div class="body">CNCF on what platform teams need once workloads span more than one node. Relevant if your infra team is being asked to be &quot;AI-ready&quot;.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/09/11/building-a-reliable-cloud-native-foundation-for-distributed-ai-training/" target="_blank" rel="noopener"><img src="img/cb2a80d50b555261.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>Boris Cherny&#x27;s guardrail list</strong> is the best match today. It names the exact things you care about: E2E tests driven by an agent, automated code review, fuzzing in CI. Worth turning into a team checklist.</div><div class="para" style="--h:130"><strong>GitHub&#x27;s secret-scanning merge blocks and Actions cache permissions</strong> are two CI settings you can flip this week with almost no cost.</div><div class="para" style="--h:130"><strong>Next.js middleware auth</strong> is directly relevant to any React/Next backend your team runs.</div><div class="para" style="--h:130"><strong>RubyGems attack</strong> matters for your dependency policy even though you are not on Ruby. npm and pub.dev face the same kind of agent traffic.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://hcker.news/?ai=exclude" data-title="Hacker News, without AI" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://hcker.news/?ai=exclude" target="_blank" rel="noopener">Hacker News, without AI</a></h3><div class="meta">hcker.news</div><div class="body">and <strong><a href="https://www.unslop.news/" target="_blank" rel="noopener">unslop.news</a></strong> — Two separate people shipped the same idea on the same day: a Hacker News front page with all AI stories filtered out. The user problem is fatigue. Readers want their old feed back. Both hit about 175 points. Lesson: a filter on an existing firehose can be a whole product. (<a href="https://news.ycombinator.com/item?id=49659647" target="_blank" rel="noopener">discussion 1</a>, <a href="https://news.ycombinator.com/item?id=49660783" target="_blank" rel="noopener">discussion 2</a>)</div></div><a class="thumb" href="https://hcker.news/?ai=exclude" target="_blank" rel="noopener"><img src="img/b61e4d6a51b37747.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/paradise-runner/toast" data-title="Toast, a beautiful-by-default terminal IDE" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/paradise-runner/toast" target="_blank" rel="noopener">Toast, a beautiful-by-default terminal IDE</a></h3><div class="meta">github.com</div><div class="body">A terminal IDE that looks good out of the box, no config needed. The problem it solves is setup friction: most terminal editors take hours to make pleasant. 86 comments show how strongly people feel about this. (<a href="https://news.ycombinator.com/item?id=49662496" target="_blank" rel="noopener">discussion</a>)</div></div><a class="thumb" href="https://github.com/paradise-runner/toast" target="_blank" rel="noopener"><img src="img/c60ff207739ebf77.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/mirza-rizvi/ResolveHQ" data-title="ResolveHQ – a helpdesk built on Cloudflare Workers, D1, R2 and Queues" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-12" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/mirza-rizvi/ResolveHQ" target="_blank" rel="noopener">ResolveHQ – a helpdesk built on Cloudflare Workers, D1, R2 and Queues</a></h3><div class="meta">github.com</div><div class="body">A full helpdesk built only on Cloudflare&#x27;s edge stack, so it runs nearly free at small scale. Interesting as a template for a serverless SaaS you could ship alone and not pay to keep alive. (<a href="https://news.ycombinator.com/item?id=49665864" target="_blank" rel="noopener">discussion</a>)</div></div><a class="thumb" href="https://github.com/mirza-rizvi/ResolveHQ" target="_blank" rel="noopener"><img src="img/51c78ba3f12802ed.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Turn on GitHub&#x27;s new <strong>secret-scanning merge block</strong> and set <strong>explicit cache permissions</strong> in one of your GitHub Actions workflows. Both are described in this week&#x27;s <a href="https://rss.com/podcasts/ship-it-weekly/3144096" target="_blank" rel="noopener">Ship It Weekly</a>. They take minutes to set up and close two real gaps: leaked secrets landing on main, and cache poisoning from other jobs.</div></section></main>
+<footer><span>source: ../20260912-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
