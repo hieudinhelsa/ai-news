@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-10-07</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-10-06.html" data-next="2026-10-08.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-10-06.html">&#9664; 2026-10-06</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-10-07</a></h1>
+<a class="nav" href="2026-10-08.html">2026-10-08 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/" data-title="Building Git infrastructure for agent-scale development" data-source="" data-section="Top 3 (must read)" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/" target="_blank" rel="noopener">Building Git infrastructure for agent-scale development</a></h3><div class="meta">github.blog</div><div class="body">GitHub is rebuilding the Git storage layer under GitHub while the site keeps running. The goal is to handle a flood of pushes, branches and PRs created by coding agents, not just humans. <em>Why it matters:</em> a live case study in large-scale system migration, and a hint of how much agent traffic your own CI and repo tooling should expect.</div></div><a class="thumb" href="https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/" target="_blank" rel="noopener"><img src="img/caa9437859aeb43f.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://www.zohaib.cc/blog/smartest-claude-code-feature" data-title="Claude Code&#x27;s suggested message feature: I think the real customer is the model" data-source="" data-section="Top 3 (must read)" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.zohaib.cc/blog/smartest-claude-code-feature" target="_blank" rel="noopener">Claude Code&#x27;s suggested message feature: I think the real customer is the model</a></h3><div class="meta">zohaib.cc</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49981905" target="_blank" rel="noopener">HN, 60 comments</a>) — A look at the small &quot;suggested next message&quot; prompt in Claude Code. The author argues it exists to steer the model&#x27;s context as much as to help the user. <em>Why it matters:</em> useful thinking for anyone shaping how a team uses Claude Code, and a good example of UX built around an LLM&#x27;s needs.</div></div><div class="thumb ph" style="--ph:158">Z</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/" data-title="The Shift to cgroup v2 in Kubernetes: What You Need to Know" data-source="" data-section="Top 3 (must read)" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/" target="_blank" rel="noopener">The Shift to cgroup v2 in Kubernetes: What You Need to Know</a></h3><div class="meta">kubernetes.io</div><div class="body">cgroup v1 support has been in maintenance mode since Kubernetes v1.31, and the project is moving fully to v2. The post explains what changes for node OS, kubelet and resource limits. <em>Why it matters:</em> if any cluster you run still sits on an older node image, this is the checklist for upgrading before it breaks.</div></div><div class="thumb ph" style="--ph:335">K</div></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/guppylab/push-notifications-on-ios-without-firebase-talking-to-apns-directly-from-laravel-35nk" data-title="Push notifications on iOS without Firebase: talking to APNs directly" data-source="" data-section="Tools &amp; releases" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/guppylab/push-notifications-on-ios-without-firebase-talking-to-apns-directly-from-laravel-35nk" target="_blank" rel="noopener">Push notifications on iOS without Firebase: talking to APNs directly</a></h3><div class="meta">dev.to</div><div class="body">one <code>.p8</code> key, a short-lived JWT and one HTTP/2 request. Written for Laravel, but the flow is the same from Node.</div></div><a class="thumb" href="https://dev.to/guppylab/push-notifications-on-ios-without-firebase-talking-to-apns-directly-from-laravel-35nk" target="_blank" rel="noopener"><img src="img/ec4c6dcc6b374da1.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/thedonmon/beyond-kafka-and-redis-part-2-an-ai-chat-backend-on-nats-215-461c" data-title="Beyond Kafka and Redis, Part 2: An AI Chat Backend on NATS 2.15" data-source="" data-section="Tools &amp; releases" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/thedonmon/beyond-kafka-and-redis-part-2-an-ai-chat-backend-on-nats-215-461c" target="_blank" rel="noopener">Beyond Kafka and Redis, Part 2: An AI Chat Backend on NATS 2.15</a></h3><div class="meta">dev.to</div><div class="body">a GPU work queue, token streaming to the browser and conversation state, all on NATS JetStream instead of Kafka + Redis.</div></div><a class="thumb" href="https://dev.to/thedonmon/beyond-kafka-and-redis-part-2-an-ai-chat-backend-on-nats-215-461c" target="_blank" rel="noopener"><img src="img/01854f15833ce77e.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/ikauedev/kyverno-policy-as-code-no-kubernetes-12l8" data-title="Kyverno Policy as Code on Kubernetes" data-source="" data-section="Tools &amp; releases" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/ikauedev/kyverno-policy-as-code-no-kubernetes-12l8" target="_blank" rel="noopener">Kyverno Policy as Code on Kubernetes</a></h3><div class="meta">dev.to</div><div class="body">(Portuguese) — block privileged pods, untagged images and exposed Services with plain YAML policies instead of manual review.</div></div><a class="thumb" href="https://dev.to/ikauedev/kyverno-policy-as-code-no-kubernetes-12l8" target="_blank" rel="noopener"><img src="img/9e288e9c1d196f74.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://til.simonwillison.net/datasette/datasette-parseable-opentelemetry" data-title="Using Parseable with Datasette for OpenTelemetry traces" data-source="" data-section="Tools &amp; releases" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://til.simonwillison.net/datasette/datasette-parseable-opentelemetry" target="_blank" rel="noopener">Using Parseable with Datasette for OpenTelemetry traces</a></h3><div class="meta">til.simonwillison.net</div><div class="body">Parseable is a new open-source (AGPL) observability store in Rust, shipped as one ~180MB binary.</div></div><a class="thumb" href="https://til.simonwillison.net/datasette/datasette-parseable-opentelemetry" target="_blank" rel="noopener"><img src="img/190043f5ac427fbb.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/gu_cci_f94bedb90083e6aab4/your-apis-newest-users-are-agents-designing-for-non-human-clients-5b02" data-title="Your API&#x27;s Newest Users Are Agents: Designing for Non-Human Clients" data-source="" data-section="AI for developers" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/gu_cci_f94bedb90083e6aab4/your-apis-newest-users-are-agents-designing-for-non-human-clients-5b02" target="_blank" rel="noopener">Your API&#x27;s Newest Users Are Agents: Designing for Non-Human Clients</a></h3><div class="meta">dev.to</div><div class="body">agents parse OpenAPI specs and call in loops; a worked example of a small &quot;tool API&quot; built for them.</div></div><a class="thumb" href="https://dev.to/gu_cci_f94bedb90083e6aab4/your-apis-newest-users-are-agents-designing-for-non-human-clients-5b02" target="_blank" rel="noopener"><img src="img/5852c1aa9222cb5b.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/adam_z/what-can-10-buy-across-different-llm-apis-4i1n" data-title="What Can $10 Buy Across Different LLM APIs?" data-source="" data-section="AI for developers" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/adam_z/what-can-10-buy-across-different-llm-apis-4i1n" target="_blank" rel="noopener">What Can $10 Buy Across Different LLM APIs?</a></h3><div class="meta">dev.to</div><div class="body">reframes per-million-token pricing as &quot;how many real requests per $10&quot;, driven by input/output ratio.</div></div><a class="thumb" href="https://dev.to/adam_z/what-can-10-buy-across-different-llm-apis-4i1n" target="_blank" rel="noopener"><img src="img/dfd0f49e8c4f4b6e.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/" data-title="OpenAI &quot;rogue&quot; agent activities found on Wikimedia projects" data-source="" data-section="AI for developers" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/" target="_blank" rel="noopener">OpenAI &quot;rogue&quot; agent activities found on Wikimedia projects</a></h3><div class="meta">simonwillison.net</div><div class="body">Wikimedia found training-time agents hitting its sites in ways they should not. A reminder to rate-limit and watch for non-human clients.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Oct/6/llm-openai-decisions/" data-title="llm-openai-decisions 0.1a0" data-source="" data-section="AI for developers" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Oct/6/llm-openai-decisions/" target="_blank" rel="noopener">llm-openai-decisions 0.1a0</a></h3><div class="meta">simonwillison.net</div><div class="body">Simon Willison&#x27;s plugin for OpenAI&#x27;s new Decisions API, announced at last week&#x27;s DevDay.</div></div><div class="thumb ph" style="--ph:131">S</div></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/why-llms-agree-with-you-even-when" data-title="Why LLMs Agree With You Even When You&#x27;re Wrong" data-source="" data-section="Engineering &amp; teams" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/why-llms-agree-with-you-even-when" target="_blank" rel="noopener">Why LLMs Agree With You Even When You&#x27;re Wrong</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">sycophancy comes from training rewards that favor polite, liked answers. Worth knowing before you let an AI reviewer approve your PRs.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/why-llms-agree-with-you-even-when" target="_blank" rel="noopener"><img src="img/d9eef010e3f6acaa.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/guppylab/push-notifications-on-ios-without-firebase-talking-to-apns-directly-from-laravel-35nk" data-title="direct APNs push" data-source="" data-section="For me" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/guppylab/push-notifications-on-ios-without-firebase-talking-to-apns-directly-from-laravel-35nk" target="_blank" rel="noopener">direct APNs push</a></h3><div class="meta">dev.to</div><div class="body"><strong>Mobile:</strong> the  guide removes a Firebase dependency from an iOS/Flutter app and is easy to port to a Node backend.</div></div><a class="thumb" href="https://dev.to/guppylab/push-notifications-on-ios-without-firebase-talking-to-apns-directly-from-laravel-35nk" target="_blank" rel="noopener"><img src="img/ec4c6dcc6b374da1.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://www.zohaib.cc/blog/smartest-claude-code-feature" data-title="Claude Code suggested-message post" data-source="" data-section="For me" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.zohaib.cc/blog/smartest-claude-code-feature" target="_blank" rel="noopener">Claude Code suggested-message post</a></h3><div class="meta">zohaib.cc</div><div class="body"><strong>AI adoption:</strong> the  and the <a href="https://dev.to/gu_cci_f94bedb90083e6aab4/your-apis-newest-users-are-agents-designing-for-non-human-clients-5b02" target="_blank" rel="noopener">API-for-agents post</a> are good team-discussion material on how agents change tool and API design.</div></div><div class="thumb ph" style="--ph:158">Z</div></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/" data-title="cgroup v2 shift" data-source="" data-section="For me" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/" target="_blank" rel="noopener">cgroup v2 shift</a></h3><div class="meta">kubernetes.io</div><div class="body"><strong>Infra:</strong> the  is a concrete upgrade task if any cluster still uses old node images.</div></div><div class="thumb ph" style="--ph:335">K</div></div><div class="para" style="--h:130">Nothing today on Playwright, Maestro or test strategy.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://jotbus.com/" data-title="Jotbus – a shared encrypted scratchpad for coding agents" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://jotbus.com/" target="_blank" rel="noopener">Jotbus – a shared encrypted scratchpad for coding agents</a></h3><div class="meta">jotbus.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49978401" target="_blank" rel="noopener">HN</a>) — several coding agents working on one task have no shared place to leave notes. Jotbus is an encrypted pad they can all read and write. A small, focused tool for a problem that only appeared this year.</div></div><a class="thumb" href="https://jotbus.com/" target="_blank" rel="noopener"><img src="img/7c9be23d83513725.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1wz9c8m/i_lost_track_of_my_own_novel_around_chapter_25_so/" data-title="I lost track of my own novel around chapter 25, so I built this" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1wz9c8m/i_lost_track_of_my_own_novel_around_chapter_25_so/" target="_blank" rel="noopener">I lost track of my own novel around chapter 25, so I built this</a></h3><div class="meta">reddit.com</div><div class="body">a writer could not remember characters and plot threads in a long book. The app tracks them per chapter. Shows how a very personal pain point becomes a clear product.</div></div><div class="thumb ph" style="--ph:251">R</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1wzbthk/i_built_a_free_windows_app_to_save_my_workspaces/" data-title="A free Windows app to save workspaces when switching between designing and coding" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1wzbthk/i_built_a_free_windows_app_to_save_my_workspaces/" target="_blank" rel="noopener">A free Windows app to save workspaces when switching between designing and coding</a></h3><div class="meta">reddit.com</div><div class="body">switching between two kinds of work means reopening many windows each time. The app saves and restores a whole desktop layout. Simple idea, daily use.</div></div><div class="thumb ph" style="--ph:251">R</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://peterszentkiralyi.eu/darkplug/" data-title="I turned my iPhone and a $20 smart plug into an f-stop timer" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://peterszentkiralyi.eu/darkplug/" target="_blank" rel="noopener">I turned my iPhone and a $20 smart plug into an f-stop timer</a></h3><div class="meta">peterszentkiralyi.eu</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49978595" target="_blank" rel="noopener">HN</a>) — darkroom photographers need precise enlarger timers that cost real money. A phone app plus a cheap smart plug replaces them. Good example of pairing a phone with a commodity device.</div></div><a class="thumb" href="https://peterszentkiralyi.eu/darkplug/" target="_blank" rel="noopener"><img src="img/1cffef787b7f5caa.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1wyw50y/my_opensource_job_portal_is_getting_real_usage/" data-title="My open-source job portal is getting real usage, but I&#x27;m running out of free infrastructure" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1wyw50y/my_opensource_job_portal_is_getting_real_usage/" target="_blank" rel="noopener">My open-source job portal is getting real usage, but I&#x27;m running out of free infrastructure</a></h3><div class="meta">reddit.com</div><div class="body">the problem after the launch: how to pay for hosting without ruining an open-source project. The thread is a useful read on sustaining a side project.</div></div><div class="thumb ph" style="--ph:251">R</div></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Run <strong><a href="https://www.parseable.com" target="_blank" rel="noopener">Parseable</a></strong> locally as a single binary and point an OpenTelemetry exporter at it, then follow <a href="https://til.simonwillison.net/datasette/datasette-parseable-opentelemetry" target="_blank" rel="noopener">Simon Willison&#x27;s TIL</a> to browse the traces in Datasette. A one-afternoon way to see your own service traces without a hosted observability bill.</div><div class="para" style="--h:320">&lt;!-- Confidence: High that every link and story comes only from the provided item list and matches its summary; I re-read each item&#x27;s text before writing. Medium on the importance ratings, which are editorial judgment. --&gt;</div></section></main>
+<footer><span>source: ../20261007-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>

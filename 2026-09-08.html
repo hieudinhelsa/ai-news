@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-09-08</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-09-07.html" data-next="2026-09-09.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-09-07.html">&#9664; 2026-09-07</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-09-08</a></h1>
+<a class="nav" href="2026-09-09.html">2026-09-09 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://github.com/trailofbits/coop" data-title="Coop – Isolated VM Environments for Running Claude Code and Codex" data-source="" data-section="Top 3 (must read)" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/trailofbits/coop" target="_blank" rel="noopener">Coop – Isolated VM Environments for Running Claude Code and Codex</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49593842" target="_blank" rel="noopener">HN discussion</a>) Trail of Bits released Coop, a tool that runs Claude Code and Codex inside isolated virtual machines instead of directly on your laptop. The agent gets a sandbox with only the project files it needs, so a bad command or a prompt injection cannot touch your host system. Why it matters: if your team runs coding agents in auto mode, this is a ready-made answer to the &quot;what can the agent break?&quot; question.</div></div><a class="thumb" href="https://github.com/trailofbits/coop" target="_blank" rel="noopener"><img src="img/2f90233781d4633e.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/changyou/ios-visual-regression-testing-with-simctl-and-pixel-diffs-4eme" data-title="iOS Visual Regression Testing with simctl and Pixel Diffs" data-source="" data-section="Top 3 (must read)" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/changyou/ios-visual-regression-testing-with-simctl-and-pixel-diffs-4eme" target="_blank" rel="noopener">iOS Visual Regression Testing with simctl and Pixel Diffs</a></h3><div class="meta">dev.to</div><div class="body">A hands-on guide to building a screenshot pipeline for iOS using <code>simctl</code> and pixel diffs, told through a real paywall layout bug. It lists the failure modes (fonts, animations, timing, simulator drift) you must fix before CI results can be trusted. Why it matters: the same lessons apply to Flutter golden tests and Maestro screenshot checks. Good input for the mobile test strategy.</div></div><a class="thumb" href="https://dev.to/changyou/ios-visual-regression-testing-with-simctl-and-pixel-diffs-4eme" target="_blank" rel="noopener"><img src="img/a6f17e06106f917f.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/how-to-deal-with-errors-and-failures" data-title="How to Deal With Errors and Failures in LLM-Powered Applications" data-source="" data-section="Top 3 (must read)" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/how-to-deal-with-errors-and-failures" target="_blank" rel="noopener">How to Deal With Errors and Failures in LLM-Powered Applications</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">ByteByteGo walks through the failure types an app hits when it depends on an LLM call: timeouts, rate limits, bad or malformed output, and silent quality drops. It covers retries, fallbacks, validation of model output, and how to design the flow so a failed LLM call does not break the user task. Why it matters: a system-design checklist for any Node.js backend that calls a model API in production.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/how-to-deal-with-errors-and-failures" target="_blank" rel="noopener"><img src="img/cd10a736fdc3cd9c.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://www.cncf.io/announcements/2026/09/07/cloud-native-computing-foundation-announces-karmada-graduation/" data-title="Karmada graduates at CNCF" data-source="" data-section="Tools &amp; releases" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/announcements/2026/09/07/cloud-native-computing-foundation-announces-karmada-graduation/" target="_blank" rel="noopener">Karmada graduates at CNCF</a></h3><div class="meta">cncf.io</div><div class="body">multi-cluster, multi-cloud Kubernetes orchestration is now a graduated project. Worth knowing if you ever need workloads across more than one cluster.</div></div><a class="thumb" href="https://www.cncf.io/announcements/2026/09/07/cloud-native-computing-foundation-announces-karmada-graduation/" target="_blank" rel="noopener"><img src="img/19b2443eed415ac8.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/7/llm/" data-title="llm 0.35" data-source="" data-section="Tools &amp; releases" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/7/llm/" target="_blank" rel="noopener">llm 0.35</a></h3><div class="meta">simonwillison.net</div><div class="body">Simon Willison&#x27;s CLI adds the new <code>gpt-6-astra</code> OpenAI model.</div></div><div class="thumb ph" style="--ph:131">S</div></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.com/trailofbits/coop" data-title="Coop" data-source="" data-section="AI for developers" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/trailofbits/coop" target="_blank" rel="noopener">Coop</a></h3><div class="meta">github.com</div><div class="body">VM sandboxes for Claude Code and Codex (see Top 3).</div></div><a class="thumb" href="https://github.com/trailofbits/coop" target="_blank" rel="noopener"><img src="img/2f90233781d4633e.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/7/video-compressor/" data-title="Video compressor" data-source="" data-section="AI for developers" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/7/video-compressor/" target="_blank" rel="noopener">Video compressor</a></h3><div class="meta">simonwillison.net</div><div class="body">Simon had Claude Code for web build a browser-only FFmpeg (WebAssembly) video tool. A small example of &quot;describe the tool, get the tool&quot; for one-off utilities.</div></div><a class="thumb" href="https://simonwillison.net/2026/Sep/7/video-compressor/" target="_blank" rel="noopener"><img src="img/394fcc6daf9ee6bb.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/rulestack/a-like-is-not-a-relationship-where-our-agents-permission-to-reply-stops-27d6" data-title="A like is not a relationship: where our agent&#x27;s permission to reply stops" data-source="" data-section="AI for developers" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/rulestack/a-like-is-not-a-relationship-where-our-agents-permission-to-reply-stops-27d6" target="_blank" rel="noopener">A like is not a relationship: where our agent&#x27;s permission to reply stops</a></h3><div class="meta">dev.to</div><div class="body">a clear design pattern for agent guardrails: widen what the agent knows without widening what it may do on its own. Useful thinking for any human-in-the-loop agent.</div></div><a class="thumb" href="https://dev.to/rulestack/a-like-is-not-a-relationship-where-our-agents-permission-to-reply-stops-27d6" target="_blank" rel="noopener"><img src="img/f201d30986f395b1.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/7/creepy-crawlies/" data-title="Creepy crawlies" data-source="" data-section="AI for developers" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/7/creepy-crawlies/" target="_blank" rel="noopener">Creepy crawlies</a></h3><div class="meta">simonwillison.net</div><div class="body">git.kernel.org now spends more CPU serving AI scrapers than serving real users. A reminder to budget for bot traffic when you run public web infrastructure.</div></div><div class="thumb ph" style="--ph:131">S</div></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/09/07/handling-vulnerability-reports-recipe-card/" data-title="Handling vulnerability reports: Recipe card" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/09/07/handling-vulnerability-reports-recipe-card/" target="_blank" rel="noopener">Handling vulnerability reports: Recipe card</a></h3><div class="meta">cncf.io</div><div class="body">a short, practical process for small projects: how to receive, triage, fix, and disclose a security report. Easy to adapt as a team runbook.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/09/07/handling-vulnerability-reports-recipe-card/" target="_blank" rel="noopener"><img src="img/f1cc43a4f16cdb4d.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://www.cncf.io/announcements/2026/09/07/china-merchants-bank-wins-cncf-end-user-case-study-contest-for-unifying-ai-training-and-inference-on-kubernetes/" data-title="China Merchants Bank: unifying AI training and inference on Kubernetes" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/announcements/2026/09/07/china-merchants-bank-wins-cncf-end-user-case-study-contest-for-unifying-ai-training-and-inference-on-kubernetes/" target="_blank" rel="noopener">China Merchants Bank: unifying AI training and inference on Kubernetes</a></h3><div class="meta">cncf.io</div><div class="body">case study on lifting GPU utilization from 35% to over 60% by putting training and inference on one platform.</div></div><a class="thumb" href="https://www.cncf.io/announcements/2026/09/07/china-merchants-bank-wins-cncf-end-user-case-study-contest-for-unifying-ai-training-and-inference-on-kubernetes/" target="_blank" rel="noopener"><img src="img/0152a6f6df3781d2.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/changyou/ios-visual-regression-testing-with-simctl-and-pixel-diffs-4eme" data-title="iOS visual regression pipeline" data-source="" data-section="For me" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/changyou/ios-visual-regression-testing-with-simctl-and-pixel-diffs-4eme" target="_blank" rel="noopener">iOS visual regression pipeline</a></h3><div class="meta">dev.to</div><div class="body">The  is the closest hit: screenshot testing failure modes translate directly to Flutter and Maestro.</div></div><a class="thumb" href="https://dev.to/changyou/ios-visual-regression-testing-with-simctl-and-pixel-diffs-4eme" target="_blank" rel="noopener"><img src="img/a6f17e06106f917f.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://github.com/trailofbits/coop" data-title="Coop" data-source="" data-section="For me" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/trailofbits/coop" target="_blank" rel="noopener">Coop</a></h3><div class="meta">github.com</div><div class="body">answers a team-adoption question for coding agents: how to let people run them in auto mode safely.</div></div><a class="thumb" href="https://github.com/trailofbits/coop" target="_blank" rel="noopener"><img src="img/2f90233781d4633e.png" alt="" loading="lazy"></a></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/how-to-deal-with-errors-and-failures" data-title="LLM error-handling guide" data-source="" data-section="For me" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/how-to-deal-with-errors-and-failures" target="_blank" rel="noopener">LLM error-handling guide</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">The  is a good review checklist for backend code that calls model APIs.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/how-to-deal-with-errors-and-failures" target="_blank" rel="noopener"><img src="img/cd10a736fdc3cd9c.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/timgordontg/engrim" data-title="Engrim – local-first SQLite memory engine for AI CLIs" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/timgordontg/engrim" target="_blank" rel="noopener">Engrim – local-first SQLite memory engine for AI CLIs</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49594008" target="_blank" rel="noopener">HN</a>) — one shared memory store that Claude Code, Codex, and other CLIs can all read and write. Problem: each tool forgets your project context, and you repeat yourself. Inspiration: small glue tools that sit between several AI tools are a real gap right now.</div></div><a class="thumb" href="https://github.com/timgordontg/engrim" target="_blank" rel="noopener"><img src="img/d02abe3b70f4c740.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://gettogether.dev" data-title="GET Together – a social network where you don&#x27;t need POST to Post" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://gettogether.dev" target="_blank" rel="noopener">GET Together – a social network where you don&#x27;t need POST to Post</a></h3><div class="meta">gettogether.dev</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49592840" target="_blank" rel="noopener">HN</a>) — a joke-but-working social network built only on HTTP GET requests. Problem: none, it is play. Inspiration: a tiny technical constraint can be the whole hook, and it drew 54 comments.</div></div><div class="thumb ph" style="--ph:200">G</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://myhomecat.com" data-title="HomeCat – design your backyard office" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://myhomecat.com" target="_blank" rel="noopener">HomeCat – design your backyard office</a></h3><div class="meta">myhomecat.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49601328" target="_blank" rel="noopener">HN</a>) — a planner for people who want a small office shed in the garden. Problem: remote workers want a quiet space but do not know sizes, costs, or layouts. Inspiration: pick one narrow life decision and build the whole tool around it.</div></div><a class="thumb" href="https://myhomecat.com" target="_blank" rel="noopener"><img src="img/8a7cc57075fa6e77.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/logimaxx/wg-admin" data-title="Wg-admin – web UI for an existing WireGuard host" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-08" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/logimaxx/wg-admin" target="_blank" rel="noopener">Wg-admin – web UI for an existing WireGuard host</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49600269" target="_blank" rel="noopener">HN</a>) — a simple web panel that manages peers on a WireGuard server you already run. Problem: adding a device to a VPN means editing config files by hand. Inspiration: &quot;put a UI on a CLI thing people already use&quot; is a repeatable indie pattern.</div></div><a class="thumb" href="https://github.com/logimaxx/wg-admin" target="_blank" rel="noopener"><img src="img/74b96561a10a19a7.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Run one of your coding-agent sessions inside <a href="https://github.com/trailofbits/coop" target="_blank" rel="noopener">Coop</a> with auto mode on. Compare how it feels against your normal setup, and note whether the sandbox blocks anything the agent needs. That gives you a concrete answer when the team asks about running agents unattended.</div></section></main>
+<footer><span>source: ../20260908-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>

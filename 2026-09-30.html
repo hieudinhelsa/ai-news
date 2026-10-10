@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-09-30</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-09-29.html" data-next="2026-10-01.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-09-29.html">&#9664; 2026-09-29</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-09-30</a></h1>
+<a class="nav" href="2026-10-01.html">2026-10-01 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/" data-title="OpenAI DevDay 2026 live blog" data-source="" data-section="Top 3 (must read)" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/" target="_blank" rel="noopener">OpenAI DevDay 2026 live blog</a></h3><div class="meta">simonwillison.net</div><div class="body">Simon Willison live-blogged the DevDay keynote from San Francisco. The headline launch is <a href="https://simonwillison.net/2026/Sep/29/hn-49898129/" target="_blank" rel="noopener">GPT-6.1 Sol</a>, pitched as &quot;near-Astra intelligence for a fifth of the price&quot;. <em>Why it matters:</em> a big price drop on a strong model changes the cost math for any LLM feature or coding-agent pipeline your team runs. Worth a re-check of which model sits behind your prompts.</div></div><a class="thumb" href="https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/" target="_blank" rel="noopener"><img src="img/3bd3ec89a48c5722.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/luisrrv/running-untrusted-react-components-in-the-browser-3mda" data-title="Running untrusted React components in the browser" data-source="" data-section="Top 3 (must read)" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/luisrrv/running-untrusted-react-components-in-the-browser-3mda" target="_blank" rel="noopener">Running untrusted React components in the browser</a></h3><div class="meta">dev.to</div><div class="body">Page builders, plugin systems and custom dashboards all end up running user-written UI code. This walkthrough builds a playground where a TSX component compiles and renders live while broken or hostile code cannot break the rest of the page. <em>Why it matters:</em> a hands-on isolation pattern for React apps that need plugins or user-authored widgets, a problem most product teams hit eventually.</div></div><a class="thumb" href="https://dev.to/luisrrv/running-untrusted-react-components-in-the-browser-3mda" target="_blank" rel="noopener"><img src="img/96560658a1e4fe30.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/maheshrayas/part-2-the-seccomp-profile-nobody-writes-by-hand-p5f" data-title="The seccomp profile for Kubernetes pods nobody writes by hand" data-source="" data-section="Top 3 (must read)" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/maheshrayas/part-2-the-seccomp-profile-nobody-writes-by-hand-p5f" target="_blank" rel="noopener">The seccomp profile for Kubernetes pods nobody writes by hand</a></h3><div class="meta">dev.to</div><div class="body">A container uses about 70 of Linux&#x27;s 300-odd syscalls. kguardian uses eBPF to observe which ones, generates a least-privilege seccomp profile, and warns when the profile goes stale. <em>Why it matters:</em> generated least-privilege pod security is a practical hardening step for teams on Kubernetes who never got around to writing seccomp profiles.</div></div><a class="thumb" href="https://dev.to/maheshrayas/part-2-the-seccomp-profile-nobody-writes-by-hand-p5f" target="_blank" rel="noopener"><img src="img/25f7a802c1cf298c.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/mt41gzp73rc6/nodejs-managed-metrics-dashboard-filtering-agent-loop-noise-across-regions-5a11" data-title="Node.js managed metrics dashboard: filtering agent-loop noise across regions" data-source="" data-section="Tools &amp; releases" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/mt41gzp73rc6/nodejs-managed-metrics-dashboard-filtering-agent-loop-noise-across-regions-5a11" target="_blank" rel="noopener">Node.js managed metrics dashboard: filtering agent-loop noise across regions</a></h3><div class="meta">dev.to</div><div class="body">start with five low-cardinality measures (loop completions, end-to-end duration, model-call duration, tokens, estimated cost) and keep prompts and error text out of metric labels before comparing Prometheus/Grafana alternatives.</div></div><a class="thumb" href="https://dev.to/mt41gzp73rc6/nodejs-managed-metrics-dashboard-filtering-agent-loop-noise-across-regions-5a11" target="_blank" rel="noopener"><img src="img/3188996d16947851.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/_40e08c1bc58852707e36e/container-vs-codec-why-an-mp4-file-can-still-fail-in-the-browser-145a" data-title="Container vs codec: why an MP4 can still fail in the browser" data-source="" data-section="Tools &amp; releases" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/_40e08c1bc58852707e36e/container-vs-codec-why-an-mp4-file-can-still-fail-in-the-browser-145a" target="_blank" rel="noopener">Container vs codec: why an MP4 can still fail in the browser</a></h3><div class="meta">dev.to</div><div class="body">the file extension is the container, the codec is what actually needs browser support. A quick explainer for anyone debugging video playback bugs in web or mobile apps.</div></div><a class="thumb" href="https://dev.to/_40e08c1bc58852707e36e/container-vs-codec-why-an-mp4-file-can-still-fail-in-the-browser-145a" target="_blank" rel="noopener"><img src="img/2085ce7fc052c193.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/29/hn-49898129/" data-title="GPT-6.1 Sol: near-Astra intelligence for a fifth of the price" data-source="" data-section="AI for developers" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/29/hn-49898129/" target="_blank" rel="noopener">GPT-6.1 Sol: near-Astra intelligence for a fifth of the price</a></h3><div class="meta">simonwillison.net</div><div class="body">Willison&#x27;s HN comment and pelican tests on the new cheaper OpenAI model announced at DevDay.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean" data-title="A privacy analysis of web and mobile conversational AI agents (PDF)" data-source="" data-section="AI for developers" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean" target="_blank" rel="noopener">A privacy analysis of web and mobile conversational AI agents (PDF)</a></h3><div class="meta">jorgegarciaherrero.com</div><div class="body">.pdf) (<a href="https://news.ycombinator.com/item?id=49890226" target="_blank" rel="noopener">HN, 411 points</a>) — study of what AI chat agents in web and mobile apps collect and share. Useful if you embed an assistant in your app and need to answer privacy questions.</div></div><div class="thumb ph" style="--ph:207">J</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/why-do-llms-lie" data-title="Why do LLMs lie?" data-source="" data-section="AI for developers" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/why-do-llms-lie" target="_blank" rel="noopener">Why do LLMs lie?</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">ByteByteGo on why hallucinations happen and the techniques that make LLM answers more dependable. Good primer to share with a team adding LLM features.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/why-do-llms-lie" target="_blank" rel="noopener"><img src="img/a9d0b575c8fd4f63.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>Untrusted React components</strong> is the closest stack hit: sandboxing user-written TSX is directly reusable for plugin or widget systems in a React product.</div><div class="para" style="--h:130"><strong>Node.js metrics dashboard</strong> gives a concrete label-hygiene rule (no prompts, IDs, or error text in labels) that also applies to your existing Node services, not only agent loops.</div><div class="para" style="--h:130"><strong>GPT-6.1 Sol pricing</strong> is a reason to review model choice in any Node-side LLM calls this week.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://space.bl2.net/" data-title="Real-time Solar System with 526k asteroids and all tracked satellites" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://space.bl2.net/" target="_blank" rel="noopener">Real-time Solar System with 526k asteroids and all tracked satellites</a></h3><div class="meta">space.bl2.net</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49898778" target="_blank" rel="noopener">HN</a>) — a browser visualization of every tracked asteroid and satellite, live. The problem: public orbital data exists but is hard to see and explore. Inspiration: turning a big open dataset into a single, beautiful interactive view is a whole app on its own.</div></div><div class="thumb ph" style="--ph:200">S</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://frostyard.github.io/nsl/" data-title="NSL – WSL for Linux" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://frostyard.github.io/nsl/" target="_blank" rel="noopener">NSL – WSL for Linux</a></h3><div class="meta">frostyard.github.io</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49894351" target="_blank" rel="noopener">HN</a>) — brings the WSL-style &quot;run another Linux distro as a lightweight subsystem&quot; experience to Linux hosts. The problem: developers want per-project isolated distros without full VMs or Docker friction. Inspiration: copy a well-loved workflow from one platform to another where it is missing.</div></div><div class="thumb ph" style="--ph:72">F</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://jevstiller.pages.dev/posts/the-guarantee/" data-title="Jevstiller – distill Jev into a local model, with a disagreement bound" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://jevstiller.pages.dev/posts/the-guarantee/" target="_blank" rel="noopener">Jevstiller – distill Jev into a local model, with a disagreement bound</a></h3><div class="meta">jevstiller.pages.dev</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49891769" target="_blank" rel="noopener">HN</a>) — distills a large model into a small local one and publishes a bound on how often the two will disagree. The problem: people want local, cheap models but need to know how much quality they give up. Inspiration: &quot;measure the gap and promise it&quot; is a strong trust feature for any AI product.</div></div><a class="thumb" href="https://jevstiller.pages.dev/posts/the-guarantee/" target="_blank" rel="noopener"><img src="img/c11db1f66b183e67.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/EverMind-AI/Raven" data-title="Raven – the harness of harnesses, built for RSI" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/EverMind-AI/Raven" target="_blank" rel="noopener">Raven – the harness of harnesses, built for RSI</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49890647" target="_blank" rel="noopener">HN, 49 comments</a>) — an agent harness that wraps and orchestrates other agent harnesses. The problem: teams juggle many coding-agent setups with no common layer. Inspiration: meta-tooling around coding agents is an open space, and the HN thread shows the debate around it.</div></div><a class="thumb" href="https://github.com/EverMind-AI/Raven" target="_blank" rel="noopener"><img src="img/334cb1f894d24655.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/lostmsu/TurboGPT" data-title="TurboGPT: train a 22 KiB transformer in 13 seconds" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-30" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/lostmsu/TurboGPT" target="_blank" rel="noopener">TurboGPT: train a 22 KiB transformer in 13 seconds</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49898931" target="_blank" rel="noopener">HN</a>) — a tiny, fast-to-train transformer. The problem: learning how transformers work is slow and GPU-heavy. Inspiration: tiny, instant-feedback learning tools are a great side-project shape.</div></div><a class="thumb" href="https://github.com/lostmsu/TurboGPT" target="_blank" rel="noopener"><img src="img/8abf9ed4bc81e6fd.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Open the <a href="https://playground.lrod.dev" target="_blank" rel="noopener">untrusted React components playground</a> from the dev.to article, write a deliberately broken TSX component, and watch how the host page keeps working. Then read the <a href="https://dev.to/luisrrv/running-untrusted-react-components-in-the-browser-3mda" target="_blank" rel="noopener">article</a> to see how the isolation is built. A cheap afternoon experiment if you have ever wanted plugins or user-authored widgets in a React app.</div></section></main>
+<footer><span>source: ../20260930-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
