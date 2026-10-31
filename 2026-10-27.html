@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-10-27</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-10-26.html" data-next="2026-10-28.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-10-26.html">&#9664; 2026-10-26</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-10-27</a></h1>
+<a class="nav" href="2026-10-28.html">2026-10-28 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/debashish_ghosal/slopsquatting-1-in-5-ai-code-samples-recommends-a-package-that-doesnt-exist-4mb6" data-title="Slopsquatting: 1 in 5 AI Code Samples Recommends a Package That Doesn&#x27;t Exist" data-source="" data-section="Top 3 (must read)" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/debashish_ghosal/slopsquatting-1-in-5-ai-code-samples-recommends-a-package-that-doesnt-exist-4mb6" target="_blank" rel="noopener">Slopsquatting: 1 in 5 AI Code Samples Recommends a Package That Doesn&#x27;t Exist</a></h3><div class="meta">dev.to</div><div class="body">AI coding assistants sometimes make up package names that look real, like <code>strutils-pro</code>. Attackers then register those names, so the next developer who trusts the AI installs their code. You don&#x27;t need to make a typo for this to happen. Seth Larson at the Python Software Foundation named it &quot;slopsquatting&quot;. <em>Why it matters:</em> Your Node.js teams use AI assistants and npm every day. This attack is real now, and a dependency check in code review and CI is cheap protection.</div></div><a class="thumb" href="https://dev.to/debashish_ghosal/slopsquatting-1-in-5-ai-code-samples-recommends-a-package-that-doesnt-exist-4mb6" target="_blank" rel="noopener"><img src="img/493c69cc6b7a3484.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/a-deep-dive-into-salesforces-agent" data-title="A Deep Dive into Salesforce&#x27;s Agent Tech Stack" data-source="" data-section="Top 3 (must read)" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/a-deep-dive-into-salesforces-agent" target="_blank" rel="noopener">A Deep Dive into Salesforce&#x27;s Agent Tech Stack</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">Salesforce moved its AI agents to a new multi-layer design. Normal fixed code and reasoning models work together, so the agents act more reliably. <em>Why it matters:</em> This is a real case study on how to build AI agents that you can trust in production. It is useful if your team is adding AI features to its backends.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/a-deep-dive-into-salesforces-agent" target="_blank" rel="noopener"><img src="img/8b1ade103034b97e.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://rss.com/podcasts/ship-it-weekly/3262521" data-title="Ship It Conversations: Running Retros as Tabletop RPGs" data-source="" data-section="Top 3 (must read)" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://rss.com/podcasts/ship-it-weekly/3262521" target="_blank" rel="noopener">Ship It Conversations: Running Retros as Tabletop RPGs</a></h3><div class="meta">rss.com</div><div class="body">Jinger Meilani is a Senior DevOps engineer at Mountain. She runs her team&#x27;s retrospectives as a tabletop role-playing game, with chapters, characters and technical archetypes. She explains how to read the room, how to follow through on actions, and why a bit of silliness gets people to give honest answers. <em>Why it matters:</em> As an EM, you can use this idea to fix retros that feel flat or where people stay quiet.</div></div><div class="thumb ph" style="--ph:92">R</div></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://simonwillison.net/2026/Oct/26/webframe-evaluation/" data-title="webframe: evaluated as a scraper and a sandbox" data-source="" data-section="Tools &amp; releases" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Oct/26/webframe-evaluation/" target="_blank" rel="noopener">webframe: evaluated as a scraper and a sandbox</a></h3><div class="meta">simonwillison.net</div><div class="body">: Simon Willison tests <a href="https://github.com/tractordev/webframe" target="_blank" rel="noopener">webframe</a>. It runs a web page like a program in a hidden headless web view. <code>console.log()</code> output goes to stdout, and exceptions go to stderr.</div></div><div class="thumb ph" style="--ph:131">S</div></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Oct/26/gpt-61-terra/" data-title="GPT-6.1 Terra" data-source="" data-section="AI for developers" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Oct/26/gpt-61-terra/" target="_blank" rel="noopener">GPT-6.1 Terra</a></h3><div class="meta">simonwillison.net</div><div class="body">: OpenAI released a new fast, efficient model. Its focus is visual reasoning and precise computer use, which is useful for agents that control a UI.</div></div><a class="thumb" href="https://simonwillison.net/2026/Oct/26/gpt-61-terra/" target="_blank" rel="noopener"><img src="img/51b6dc021077f16c.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.com/FrigadeHQ/hob" data-title="Hob" data-source="" data-section="AI for developers" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/FrigadeHQ/hob" target="_blank" rel="noopener">Hob</a></h3><div class="meta">github.com</div><div class="body">: an open-source alternative to Claude Cowork and ChatGPT that runs on your device (<a href="https://news.ycombinator.com/item?id=50246238" target="_blank" rel="noopener">HN discussion</a>, 124 points).</div></div><a class="thumb" href="https://github.com/FrigadeHQ/hob" target="_blank" rel="noopener"><img src="img/8cfee209e93b7c87.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/10/26/isolation-security-scale/" data-title="CNCF: Isolation. Security. Scale." data-source="" data-section="AI for developers" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/10/26/isolation-security-scale/" target="_blank" rel="noopener">CNCF: Isolation. Security. Scale.</a></h3><div class="meta">cncf.io</div><div class="body">: AI agents need isolation, policy enforcement and scale before you can run them safely in a controlled environment.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/10/26/isolation-security-scale/" target="_blank" rel="noopener"><img src="img/4eb9d93600153dd1.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://rss.com/podcasts/ship-it-weekly/3262521" data-title="Running Retros as Tabletop RPGs" data-source="" data-section="Engineering &amp; teams" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://rss.com/podcasts/ship-it-weekly/3262521" target="_blank" rel="noopener">Running Retros as Tabletop RPGs</a></h3><div class="meta">rss.com</div><div class="body">: see Top 3.</div></div><div class="thumb ph" style="--ph:92">R</div></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>Slopsquatting</strong> is the most direct risk for your Node.js teams. Add a &quot;does this package really exist and is it trusted?&quot; check to code review and CI.</div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/gimnathperera/i-built-a-real-time-pwa-where-couples-grow-a-plant-by-drinking-water-react-19-supabase-14mc" data-title="DuoDrop" data-source="" data-section="For me" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/gimnathperera/i-built-a-real-time-pwa-where-couples-grow-a-plant-by-drinking-water-react-19-supabase-14mc" target="_blank" rel="noopener">DuoDrop</a></h3><div class="meta">dev.to</div><div class="body">: a real-time PWA (a web app that installs and works like a mobile app) built with React 19 + Supabase. It is a good example of a mobile-first PWA on your web stack.</div></div><a class="thumb" href="https://dev.to/gimnathperera/i-built-a-real-time-pwa-where-couples-grow-a-plant-by-drinking-water-react-19-supabase-14mc" target="_blank" rel="noopener"><img src="img/4c0a87d2a71c3942.webp" alt="" loading="lazy"></a></div><div class="para" style="--h:130"><strong>Tabletop retros</strong> are an easy team-practice experiment for your next sprint.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://freehire.me/" data-title="Freehire" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://freehire.me/" target="_blank" rel="noopener">Freehire</a></h3><div class="meta">freehire.me</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50237813" target="_blank" rel="noopener">HN</a>): an open-source search over 3M+ tech jobs, taken straight from company career boards. <em>Problem:</em> job boards are noisy and miss many roles. <em>Inspiration:</em> collect public data at the source, then make it searchable. It could also help when you are hiring.</div></div><a class="thumb" href="https://freehire.me/" target="_blank" rel="noopener"><img src="img/1543a3e1690652f3.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://wraps.dev" data-title="Wraps" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://wraps.dev" target="_blank" rel="noopener">Wraps</a></h3><div class="meta">wraps.dev</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50249293" target="_blank" rel="noopener">HN</a>): Resend-style email sending on your own AWS SES, open source. <em>Problem:</em> good email developer experience costs money, and cheap SES is hard to use. <em>Inspiration:</em> put a nice developer experience on top of cheap cloud services.</div></div><a class="thumb" href="https://wraps.dev" target="_blank" rel="noopener"><img src="img/96377b5da0f25962.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://proc-cli.com/" data-title="Proc-CLI" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://proc-cli.com/" target="_blank" rel="noopener">Proc-CLI</a></h3><div class="meta">proc-cli.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50239041" target="_blank" rel="noopener">HN</a>): a CLI for managing processes and ports, designed to be easy for AI agents to use. <em>Problem:</em> agents struggle with &quot;port already in use&quot; and leftover processes. <em>Inspiration:</em> build developer tools for AI agents as users, not only for humans.</div></div><div class="thumb ph" style="--ph:79">P</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://titleart.dvy.io/" data-title="TitleArt" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-27" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://titleart.dvy.io/" target="_blank" rel="noopener">TitleArt</a></h3><div class="meta">titleart.dvy.io</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50238708" target="_blank" rel="noopener">HN</a>, 389 points): makes text look like it&#x27;s from 1997. <em>Problem:</em> just fun and nostalgia. <em>Inspiration:</em> a tiny, playful one-feature app can still get very popular.</div></div><a class="thumb" href="https://titleart.dvy.io/" target="_blank" rel="noopener"><img src="img/a2181227bfa360bf.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Try <a href="https://github.com/tractordev/webframe" target="_blank" rel="noopener">webframe</a>, using <a href="https://github.com/simonw/research/tree/main/webframe-evaluation#readme" target="_blank" rel="noopener">Simon Willison&#x27;s notes</a>. Point it at a page or a local HTML file. You get console output and errors in your terminal. This makes it a light way to run front-end smoke checks or quick scraping scripts in CI, without a full Playwright setup.</div></section></main>
+<footer><span>source: ../20261027-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
