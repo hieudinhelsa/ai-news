@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-09-19</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-09-18.html" data-next="2026-09-21.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-09-18.html">&#9664; 2026-09-18</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-09-19</a></h1>
+<a class="nav" href="2026-09-21.html">2026-09-21 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://code.claude.com/docs/en/changelog" data-title="Claude Code now reads AGENTS.md if there is no CLAUDE.md" data-source="" data-section="Top 3 (must read)" data-report="2026-09-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code now reads AGENTS.md if there is no CLAUDE.md</a></h3><div class="meta">code.claude.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49760187" target="_blank" rel="noopener">HN discussion</a>, <a href="https://simonwillison.net/2026/Sep/18/thariq-shihipar/" target="_blank" rel="noopener">Simon Willison&#x27;s note</a>) Starting in Claude Code 2.1.277, if a folder has no CLAUDE.md, Claude Code looks for and uses AGENTS.md instead. The feature is built as a &quot;mod&quot;, which Anthropic says is the upcoming way to customize the Claude Code harness, and custom project-instruction mods will be possible too. Why it matters: your repos can keep one instruction file that works for Claude Code, Copilot, and other agents. The mods system also hints at how teams will customize the tool in the future.</div></div><a class="thumb" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener"><img src="img/9b0bea9a8f225cf0.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://tokenstead.ai/guides/zcode-silent-git-history-upload" data-title="ZCode, the GLM coding agent, silently uploads your Git history" data-source="" data-section="Top 3 (must read)" data-report="2026-09-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://tokenstead.ai/guides/zcode-silent-git-history-upload" target="_blank" rel="noopener">ZCode, the GLM coding agent, silently uploads your Git history</a></h3><div class="meta">tokenstead.ai</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49752422" target="_blank" rel="noopener">HN discussion</a>) A write-up reports that the ZCode coding agent sends your Git history to its servers without clearly telling you. The HN thread has 258 points and is a good place to see the details and reactions. Why it matters: as an EM, you decide which coding agents your team may install. This is a strong reason to check what each tool sends over the network before you approve it.</div></div><a class="thumb" href="https://tokenstead.ai/guides/zcode-silent-git-history-upload" target="_blank" rel="noopener"><img src="img/b3566f3850891301.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/gde/why-ai-coding-agents-crash-at-3-am-the-happy-path-mirage-the-forced-continuity-defect-46pd" data-title="Why AI Coding Agents Crash at 3 AM: The Happy-Path Mirage &amp; The Forced Continuity Defect" data-source="" data-section="Top 3 (must read)" data-report="2026-09-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/gde/why-ai-coding-agents-crash-at-3-am-the-happy-path-mirage-the-forced-continuity-defect-46pd" target="_blank" rel="noopener">Why AI Coding Agents Crash at 3 AM: The Happy-Path Mirage &amp; The Forced Continuity Defect</a></h3><div class="meta">dev.to</div><div class="body">The article argues that agent-written code often works on a quiet staging server but fails under real production conditions, like bad data or slow networks. It names two patterns: the &quot;happy-path mirage&quot; and the &quot;forced continuity defect&quot;. Why it matters: it gives you concrete failure patterns to look for in code review and to cover in your test strategy when your team ships agent-written code.</div></div><a class="thumb" href="https://dev.to/gde/why-ai-coding-agents-crash-at-3-am-the-happy-path-mirage-the-forced-continuity-defect-46pd" target="_blank" rel="noopener"><img src="img/e49daf394c5b852d.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/" data-title="Should you read the code, is RAG dead, and did Skills kill MCP?" data-source="" data-section="AI for developers" data-report="2026-09-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/" target="_blank" rel="noopener">Should you read the code, is RAG dead, and did Skills kill MCP?</a></h3><div class="meta">github.blog</div><div class="body">GitHub Podcast episode on current AI hot takes. Useful for how teams think about reviewing agent output, and Skills vs MCP.</div></div><div class="thumb ph" style="--ph:144">G</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/sholajegede/how-to-stop-a-leaked-ai-agent-key-from-still-working-with-kinde-access-tokens-2je5" data-title="How to stop a leaked AI agent key from still working with Kinde access tokens" data-source="" data-section="AI for developers" data-report="2026-09-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/sholajegede/how-to-stop-a-leaked-ai-agent-key-from-still-working-with-kinde-access-tokens-2je5" target="_blank" rel="noopener">How to stop a leaked AI agent key from still working with Kinde access tokens</a></h3><div class="meta">dev.to</div><div class="body">Argues agent credentials should expire in minutes, not months, because agents do not mind re-authenticating. Uses short-lived access tokens as the fix.</div></div><a class="thumb" href="https://dev.to/sholajegede/how-to-stop-a-leaked-ai-agent-key-from-still-working-with-kinde-access-tokens-2je5" target="_blank" rel="noopener"><img src="img/43c121372bea27e6.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/uridovoicenote/talking-to-an-agent-is-not-talking-to-yourself-22l0" data-title="Talking to an agent is not talking to yourself" data-source="" data-section="AI for developers" data-report="2026-09-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/uridovoicenote/talking-to-an-agent-is-not-talking-to-yourself-22l0" target="_blank" rel="noopener">Talking to an agent is not talking to yourself</a></h3><div class="meta">dev.to</div><div class="body">When you dictate to a coding agent, your words become the instruction with no editing step. The post lists what loose speech drops and how to speak more precisely.</div></div><a class="thumb" href="https://dev.to/uridovoicenote/talking-to-an-agent-is-not-talking-to-yourself-22l0" target="_blank" rel="noopener"><img src="img/414d0ef19cdfdfb0.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>AGENTS.md support in Claude Code</strong> is the direct hit. If any of your repos are used with more than one agent, you can now keep a single AGENTS.md instead of duplicating rules into CLAUDE.md.</div><div class="para" style="--h:130"><strong>ZCode&#x27;s silent upload</strong> is an EM item. It is a good reason to add a &quot;what does this tool send home&quot; check to your team&#x27;s process for approving coding agents.</div><div class="para" style="--h:130"><strong>The 3 AM article</strong> maps well to your automation-testing interest. Its two failure patterns are good candidates for E2E and chaos-style test cases on agent-written code.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://rickub.com/" data-title="Rickub – The Smartest Git in the Universe" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-19" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://rickub.com/" target="_blank" rel="noopener">Rickub – The Smartest Git in the Universe</a></h3><div class="meta">rickub.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49755312" target="_blank" rel="noopener">HN discussion</a>) — A Show HN project that pitches itself as a smarter Git. The problem it targets is that Git&#x27;s day-to-day workflow is still hard for many developers. The 20-comment thread is worth a look for how people react to bold claims about developer tools, and for the gap between &quot;Git is hard&quot; and what people will actually switch to.</div></div><div class="thumb ph" style="--ph:262">R</div></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Update Claude Code to 2.1.277 or newer, then pick one repo and move its project rules into an AGENTS.md file with no CLAUDE.md next to it. Check that Claude Code still follows the rules. Details in the <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code changelog</a>.</div></section></main>
+<footer><span>source: ../20260919-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>

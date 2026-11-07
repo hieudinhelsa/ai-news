@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-08-20</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-08-19.html" data-next="2026-08-21.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-08-19.html">&#9664; 2026-08-19</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-08-20</a></h1>
+<a class="nav" href="2026-08-21.html">2026-08-21 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/" data-title="The Pulse: Grok&#x27;s CLI caught uploading all your local files to the cloud" data-source="" data-section="Top 3 (must read)" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/" target="_blank" rel="noopener">The Pulse: Grok&#x27;s CLI caught uploading all your local files to the cloud</a></h3><div class="meta">blog.pragmaticengineer.com</div><div class="body">Devs found that Grok CLI pushed all local files, including <code>.env</code> files and git history, to a GCP bucket without encryption. SpaceX&#x27;s first reaction was to blame the devs. <em>Why it matters: your team runs AI coding CLIs with full file access every day — this is the case study for why you need a policy on which agent tools are allowed and what they can read.</em></div></div><a class="thumb" href="https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/" target="_blank" rel="noopener"><img src="img/c1994fb128f54231.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://github.com/anthropics/claude-code/issues/6235" data-title="Feature Request: Support AGENTS.md in Claude Code" data-source="" data-section="Top 3 (must read)" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/anthropics/claude-code/issues/6235" target="_blank" rel="noopener">Feature Request: Support AGENTS.md in Claude Code</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49367350" target="_blank" rel="noopener">HN discussion</a>, 145 points) — A push for Claude Code to support AGENTS.md, the emerging cross-tool standard for agent instructions, instead of only CLAUDE.md. The thread covers how teams keep instructions in sync across Copilot, Cursor, and Claude Code. <em>Why it matters: if your team uses more than one coding agent, one shared instruction file beats maintaining three copies.</em></div></div><a class="thumb" href="https://github.com/anthropics/claude-code/issues/6235" target="_blank" rel="noopener"><img src="img/d829edc693d41220.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/cole_halton_42f71d71b809b/how-i-actually-eval-ai-code-review-tools-no-vendor-numbers-621" data-title="How I actually eval AI code review tools (no vendor numbers)" data-source="" data-section="Top 3 (must read)" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/cole_halton_42f71d71b809b/how-i-actually-eval-ai-code-review-tools-no-vendor-numbers-621" target="_blank" rel="noopener">How I actually eval AI code review tools (no vendor numbers)</a></h3><div class="meta">dev.to</div><div class="body">A DIY method for testing AI code review tools on your own repos before letting them into CI, instead of trusting vendor precision numbers. The author&#x27;s first real-repo run gave 30 comments and 25 were pedantic or wrong. <em>Why it matters: as an EM you decide which AI review tool &quot;earns a seat in CI&quot; — this gives you a repeatable way to make that call.</em></div></div><a class="thumb" href="https://dev.to/cole_halton_42f71d71b809b/how-i-actually-eval-ai-code-review-tools-no-vendor-numbers-621" target="_blank" rel="noopener"><img src="img/219a865bee26ddc9.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/" data-title="smolmachines / smolvm as a sandbox for untrusted Python &amp; JavaScript" data-source="" data-section="Tools &amp; releases" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/" target="_blank" rel="noopener">smolmachines / smolvm as a sandbox for untrusted Python &amp; JavaScript</a></h3><div class="meta">simonwillison.net</div><div class="body">Simon Willison&#x27;s research on using smolvm to run untrusted code fast and safely. Useful if you ever let agents or users run code.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://ngrok.com/blog/probes" data-title="How Kubernetes Probes Work" data-source="" data-section="Tools &amp; releases" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://ngrok.com/blog/probes" target="_blank" rel="noopener">How Kubernetes Probes Work</a></h3><div class="meta">ngrok.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49363665" target="_blank" rel="noopener">HN</a>) — Clear walkthrough of liveness, readiness, and startup probes and how they actually behave.</div></div><a class="thumb" href="https://ngrok.com/blog/probes" target="_blank" rel="noopener"><img src="img/ce98641df2b8aa95.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.com/onecli/onecli" data-title="Launch HN: OneCLI (YC S26) — OSS sandboxed agent harness for teams" data-source="" data-section="AI for developers" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/onecli/onecli" target="_blank" rel="noopener">Launch HN: OneCLI (YC S26) — OSS sandboxed agent harness for teams</a></h3><div class="meta">github.com</div><div class="body">Open-source harness for running coding agents in sandboxes at team level. Directly on the &quot;how teams adopt agents safely&quot; theme.</div></div><a class="thumb" href="https://github.com/onecli/onecli" target="_blank" rel="noopener"><img src="img/11b62d30a27454a6.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.com/anthropics/claude-code/issues/77136" data-title="Opus 5.0 drives incoherence into the stratosphere" data-source="" data-section="AI for developers" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/anthropics/claude-code/issues/77136" target="_blank" rel="noopener">Opus 5.0 drives incoherence into the stratosphere</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49364658" target="_blank" rel="noopener">HN</a>) — A widely upvoted Claude Code issue about model output quality. Worth a skim if your team is on Opus 5.</div></div><a class="thumb" href="https://github.com/anthropics/claude-code/issues/77136" target="_blank" rel="noopener"><img src="img/8de61cc216d8130b.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/" data-title="GitHub Copilot app: Managing your work" data-source="" data-section="AI for developers" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/" target="_blank" rel="noopener">GitHub Copilot app: Managing your work</a></h3><div class="meta">github.blog</div><div class="body">The &quot;My work&quot; pane tracks several Copilot sessions at once: in flight, done, next.</div></div><a class="thumb" href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/" target="_blank" rel="noopener"><img src="img/b5a1511da6d9a3c2.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/" data-title="Conceptual integrity and counting lines of code" data-source="" data-section="AI for developers" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/" target="_blank" rel="noopener">Conceptual integrity and counting lines of code</a></h3><div class="meta">simonwillison.net</div><div class="body">Simon Willison on how AI changes software development, from a Talking Postgres podcast.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Aug/19/jeremy-morrell/" data-title="Extensible software in the age of LLMs (Jeremy Morrell, via Simon Willison)" data-source="" data-section="AI for developers" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Aug/19/jeremy-morrell/" target="_blank" rel="noopener">Extensible software in the age of LLMs (Jeremy Morrell, via Simon Willison)</a></h3><div class="meta">simonwillison.net</div><div class="body">Idea: build a solid core app and let LLMs write safe, sandboxed user extensions.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/graphrag-how-ai-answers-questions" data-title="GraphRAG: How AI answers questions hidden across many documents" data-source="" data-section="AI for developers" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/graphrag-how-ai-answers-questions" target="_blank" rel="noopener">GraphRAG: How AI answers questions hidden across many documents</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">ByteByteGo explainer on graph-based RAG for questions that span many documents.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/graphrag-how-ai-answers-questions" target="_blank" rel="noopener"><img src="img/cdaffd7248916dbc.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://dev.to/james-coombs/the-css-problem-nobody-thinks-is-solvable-10g" data-title="The CSS Problem Nobody Thinks Is Solvable" data-source="" data-section="Engineering &amp; teams" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/james-coombs/the-css-problem-nobody-thinks-is-solvable-10g" target="_blank" rel="noopener">The CSS Problem Nobody Thinks Is Solvable</a></h3><div class="meta">dev.to</div><div class="body">A real migration story: moving a large frontend from Material UI to Radix + Tailwind while four CSS systems had to coexist.</div></div><a class="thumb" href="https://dev.to/james-coombs/the-css-problem-nobody-thinks-is-solvable-10g" target="_blank" rel="noopener"><img src="img/507fd4c8e5562c93.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/08/19/kyverno-is-a-platform-primitive-not-a-security-tool/" data-title="Kyverno is a platform primitive, not a security tool" data-source="" data-section="Engineering &amp; teams" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/08/19/kyverno-is-a-platform-primitive-not-a-security-tool/" target="_blank" rel="noopener">Kyverno is a platform primitive, not a security tool</a></h3><div class="meta">cncf.io</div><div class="body">Argues Kyverno should live with the platform team, not on the security team&#x27;s budget line. An org-design question as much as a tech one.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/08/19/kyverno-is-a-platform-primitive-not-a-security-tool/" target="_blank" rel="noopener"><img src="img/c6c4bf55ed3450b2.png" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/cole_halton_42f71d71b809b/how-i-actually-eval-ai-code-review-tools-no-vendor-numbers-621" data-title="AI code review eval method" data-source="" data-section="For me" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/cole_halton_42f71d71b809b/how-i-actually-eval-ai-code-review-tools-no-vendor-numbers-621" target="_blank" rel="noopener">AI code review eval method</a></h3><div class="meta">dev.to</div><div class="body">The  is the most actionable item today — it maps straight to your &quot;how teams adopt AI&quot; decisions.</div></div><a class="thumb" href="https://dev.to/cole_halton_42f71d71b809b/how-i-actually-eval-ai-code-review-tools-no-vendor-numbers-621" target="_blank" rel="noopener"><img src="img/219a865bee26ddc9.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://news.ycombinator.com/item?id=49367350" data-title="AGENTS.md discussion" data-source="" data-section="For me" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://news.ycombinator.com/item?id=49367350" target="_blank" rel="noopener">AGENTS.md discussion</a></h3><div class="meta">news.ycombinator.com</div><div class="body">The  matters if your team mixes Claude Code and Copilot.</div></div><div class="thumb ph" style="--ph:219">N</div></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/james-coombs/the-css-problem-nobody-thinks-is-solvable-10g" data-title="MUI → Radix/Tailwind migration" data-source="" data-section="For me" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/james-coombs/the-css-problem-nobody-thinks-is-solvable-10g" target="_blank" rel="noopener">MUI → Radix/Tailwind migration</a></h3><div class="meta">dev.to</div><div class="body">The  is the one item squarely in your React/TypeScript lane.</div></div><a class="thumb" href="https://dev.to/james-coombs/the-css-problem-nobody-thinks-is-solvable-10g" target="_blank" rel="noopener"><img src="img/507fd4c8e5562c93.webp" alt="" loading="lazy"></a></div><div class="para" style="--h:130">Nothing today on Playwright, Maestro, Flutter, or Node.js releases.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://demo.frugaltokens.com/" data-title="Frugal Tokens — explore costs and usage across coding agents" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://demo.frugaltokens.com/" target="_blank" rel="noopener">Frugal Tokens — explore costs and usage across coding agents</a></h3><div class="meta">demo.frugaltokens.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49364223" target="_blank" rel="noopener">HN</a>) — A dashboard for what your coding agents actually cost. Problem: teams adopt agents with no view of spend. Very close to a tool you could build for your own team.</div></div><div class="thumb ph" style="--ph:140">D</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vsjkyy/stfu_i_built_an_app_that_punishes_my_kid_for/" data-title="S.T.F.U — an app that detects a kid yelling while gaming" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vsjkyy/stfu_i_built_an_app_that_punishes_my_kid_for/" target="_blank" rel="noopener">S.T.F.U — an app that detects a kid yelling while gaming</a></h3><div class="meta">reddit.com</div><div class="body">Calibrates to one voice, escalates consequences, logs everything. Problem: a house rule that needed automatic, fair enforcement. Fun example of turning a parenting pain into sensors + rules.</div></div><div class="thumb ph" style="--ph:251">R</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vsmr9l/i_built_a_project_management_tool_that_uses_a_jar/" data-title="A project management tool that fills a jar with your finished tasks" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vsmr9l/i_built_a_project_management_tool_that_uses_a_jar/" target="_blank" rel="noopener">A project management tool that fills a jar with your finished tasks</a></h3><div class="meta">reddit.com</div><div class="body">Problem: todo apps show what&#x27;s left, never what you did. A tiny visual reward loop — a pattern you could reuse in any habit or team tool.</div></div><div class="thumb ph" style="--ph:251">R</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vsjdsy/i_built_a_tool_to_fix_the_fact_that_i_forget/" data-title="A tool to fix forgetting everything you read a week later" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vsjdsy/i_built_a_tool_to_fix_the_fact_that_i_forget/" target="_blank" rel="noopener">A tool to fix forgetting everything you read a week later</a></h3><div class="meta">reddit.com</div><div class="body">Problem: reading without retention. Spaced resurfacing of things you read is a simple, evergreen app idea.</div></div><div class="thumb ph" style="--ph:251">R</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vsin1d/i_made_a_utility_for_reading_aloud_and_dictating/" data-title="Offline read-aloud and dictation utility for Mac" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vsin1d/i_made_a_utility_for_reading_aloud_and_dictating/" target="_blank" rel="noopener">Offline read-aloud and dictation utility for Mac</a></h3><div class="meta">reddit.com</div><div class="body">Problem: TTS and dictation tools that need wifi and send your text away. &quot;Same tool, but local and private&quot; is a repeatable indie angle.</div></div><div class="thumb ph" style="--ph:251">R</div></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Run the DIY eval from <a href="https://dev.to/cole_halton_42f71d71b809b/how-i-actually-eval-ai-code-review-tools-no-vendor-numbers-621" target="_blank" rel="noopener">How I actually eval AI code review tools</a> on one of your own repos: take 10 recent real PRs, let a tool review them, and count useful vs. noisy comments before you decide anything about CI.</div></section></main>
+<footer><span>source: ../20260820-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>

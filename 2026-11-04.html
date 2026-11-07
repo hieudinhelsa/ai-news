@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-11-04</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-11-03.html" data-next="2026-11-05.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-11-03.html">&#9664; 2026-11-03</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-11-04</a></h1>
+<a class="nav" href="2026-11-05.html">2026-11-05 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co" data-title="How Revolut Cut Its AI Coding Bill 90% by Self-Hosting an Open-Weight Model" data-source="" data-section="Top 3 (must read)" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co" target="_blank" rel="noopener">How Revolut Cut Its AI Coding Bill 90% by Self-Hosting an Open-Weight Model</a></h3><div class="meta">dev.to</div><div class="body">Revolut gave AI coding assistants to about 2,000 engineers, and some of them spent $1,000 to $10,000 a month on tokens with little clear return. The company stopped using frontier APIs as the default and moved engineers to a self-hosted open-weight model, which cut the bill by about 90%. <em>Why it matters:</em> This is a real example of AI tool costs growing with team size. It is useful if you have to justify or control your team&#x27;s spend on coding agents.</div></div><a class="thumb" href="https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co" target="_blank" rel="noopener"><img src="img/5db1348771a307a7.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/how-netflix-uses-ai-agents-for-performance" data-title="How Netflix Uses AI Agents for Performance Engineering" data-source="" data-section="Top 3 (must read)" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/how-netflix-uses-ai-agents-for-performance" target="_blank" rel="noopener">How Netflix Uses AI Agents for Performance Engineering</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">Netflix engineering built a system of autonomous agents for performance engineering. ByteByteGo explains how it works. <em>Why it matters:</em> This case study connects your SRE and system design interests with how a large team uses agents in production, not only for writing code.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/how-netflix-uses-ai-agents-for-performance" target="_blank" rel="noopener"><img src="img/a8d5ce0e798b0db2.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://news.ycombinator.com/item?id=50352757" data-title="OpenAI seems to be silently re-enabling model training on Codex chats" data-source="" data-section="Top 3 (must read)" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://news.ycombinator.com/item?id=50352757" target="_blank" rel="noopener">OpenAI seems to be silently re-enabling model training on Codex chats</a></h3><div class="meta">news.ycombinator.com</div><div class="body">A popular Hacker News thread (439 points, 139 comments) reports that OpenAI may be turning model training on Codex chats back on without telling users. The comments discuss what this means for code and data that people share with the tool. <em>Why it matters:</em> If anyone on your team uses Codex on company code, check the data-training settings now. Also add this to your AI tool policy.</div></div><div class="thumb ph" style="--ph:219">N</div></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/11/03/openkruise-agents-v0-6-0-leaping-ahead-in-agent-sandbox-security-and-automation/" data-title="OpenKruise Agents v0.6.0" data-source="" data-section="Tools &amp; releases" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/11/03/openkruise-agents-v0-6-0-leaping-ahead-in-agent-sandbox-security-and-automation/" target="_blank" rel="noopener">OpenKruise Agents v0.6.0</a></h3><div class="meta">cncf.io</div><div class="body">: a CNCF sub-project that manages agent sandboxes at scale on Kubernetes. This release adds better sandbox security and automation.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/11/03/openkruise-agents-v0-6-0-leaping-ahead-in-agent-sandbox-security-and-automation/" target="_blank" rel="noopener"><img src="img/bb771d725d5d2335.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/moktar_cffd734aa15706ed2c/how-to-deploy-n8n-in-queue-mode-on-hetzner-for-5mo-beat-zapiers-500mo-bill-9bb" data-title="Deploy n8n in &quot;Queue Mode&quot; on Hetzner for $5/mo" data-source="" data-section="Tools &amp; releases" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/moktar_cffd734aa15706ed2c/how-to-deploy-n8n-in-queue-mode-on-hetzner-for-5mo-beat-zapiers-500mo-bill-9bb" target="_blank" rel="noopener">Deploy n8n in &quot;Queue Mode&quot; on Hetzner for $5/mo</a></h3><div class="meta">dev.to</div><div class="body">: a self-hosted n8n setup with Redis, Postgres, a web process and a separate worker. This setup keeps n8n running under heavy webhook load.</div></div><a class="thumb" href="https://dev.to/moktar_cffd734aa15706ed2c/how-to-deploy-n8n-in-queue-mode-on-hetzner-for-5mo-beat-zapiers-500mo-bill-9bb" target="_blank" rel="noopener"><img src="img/c604253ad0990491.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/database-engineering/how-to-read-postgresql-explain-output-4bhd" data-title="How to read PostgreSQL EXPLAIN output" data-source="" data-section="Tools &amp; releases" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/database-engineering/how-to-read-postgresql-explain-output-4bhd" target="_blank" rel="noopener">How to read PostgreSQL EXPLAIN output</a></h3><div class="meta">dev.to</div><div class="body">: a practical guide to reading query plans. Useful for any Node backend that uses Postgres.</div></div><a class="thumb" href="https://dev.to/database-engineering/how-to-read-postgresql-explain-output-4bhd" target="_blank" rel="noopener"><img src="img/de59c8b11e0a2f5e.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/metataro/let-your-ai-agent-look-at-your-server-on-the-same-screen-over-the-same-ssh-without-ever-handing-1e05" data-title="Let your AI agent look at your server without handing it a shell" data-source="" data-section="AI for developers" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/metataro/let-your-ai-agent-look-at-your-server-on-the-same-screen-over-the-same-ssh-without-ever-handing-1e05" target="_blank" rel="noopener">Let your AI agent look at your server without handing it a shell</a></h3><div class="meta">dev.to</div><div class="body">: lets an agent see service status and config files over your SSH session, but it never gets a full shell. This is a safer pattern for ops work with agents.</div></div><a class="thumb" href="https://dev.to/metataro/let-your-ai-agent-look-at-your-server-on-the-same-screen-over-the-same-ssh-without-ever-handing-1e05" target="_blank" rel="noopener"><img src="img/7b2448e5aff14406.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/apoorvdarshan/claude-code-codex-and-cursor-one-agent-picker-in-coincide-b7k" data-title="Coincide: one agent picker for Claude Code, Codex and Cursor" data-source="" data-section="AI for developers" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/apoorvdarshan/claude-code-codex-and-cursor-one-agent-picker-in-coincide-b7k" target="_blank" rel="noopener">Coincide: one agent picker for Claude Code, Codex and Cursor</a></h3><div class="meta">dev.to</div><div class="body">: a native Mac app that runs several coding agents in one place. You can switch agent and model with one shortcut.</div></div><a class="thumb" href="https://dev.to/apoorvdarshan/claude-code-codex-and-cursor-one-agent-picker-in-coincide-b7k" target="_blank" rel="noopener"><img src="img/3f1be02b5165b04d.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/" data-title="Arnis: one maintainer + GitHub Copilot" data-source="" data-section="AI for developers" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/" target="_blank" rel="noopener">Arnis: one maintainer + GitHub Copilot</a></h3><div class="meta">github.blog</div><div class="body">: a side project that grew large. Its author now maintains it alone with help from Copilot.</div></div><a class="thumb" href="https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/" target="_blank" rel="noopener"><img src="img/a9339aac474e2df0.png" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co" data-title="Revolut&#x27;s self-hosted AI coding model" data-source="" data-section="Engineering &amp; teams" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co" target="_blank" rel="noopener">Revolut&#x27;s self-hosted AI coding model</a></h3><div class="meta">dev.to</div><div class="body">and the <a href="https://news.ycombinator.com/item?id=50352757" target="_blank" rel="noopener">Codex training thread</a> together show two problems that come with team-wide AI adoption: <strong>cost control</strong> and <strong>data policy</strong>. Both are good topics for your next team discussion on AI tools.</div></div><a class="thumb" href="https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co" target="_blank" rel="noopener"><img src="img/5db1348771a307a7.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>EM + AI adoption:</strong> Revolut&#x27;s 90% cost cut (2,000 engineers, some spending up to $10,000 a month each).</div><div class="para" style="--h:130"><strong>SRE / distributed systems:</strong> Netflix&#x27;s performance agents and OpenKruise Agents on Kubernetes.</div><div class="para" style="--h:130"><strong>Node backend:</strong> the Postgres EXPLAIN guide.</div><div class="para" style="--h:130"><strong>Safe agent ops:</strong> the read-only SSH pattern for agents.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://hackertimes.ca/" data-title="Hacker Times" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://hackertimes.ca/" target="_blank" rel="noopener">Hacker Times</a></h3><div class="meta">hackertimes.ca</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50346981" target="_blank" rel="noopener">HN</a>): Hacker News shown with a New York Times newspaper layout. Problem: a plain link list is hard to scan. Idea for you: a new layout for an existing feed can be a full product (451 points).</div></div><div class="thumb ph" style="--ph:107">H</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://hackertv.org" data-title="HackerTV" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://hackertv.org" target="_blank" rel="noopener">HackerTV</a></h3><div class="meta">hackertv.org</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50346755" target="_blank" rel="noopener">HN</a>): the YouTube videos HN recommends most, shown as 24/7 TV channels. Problem: you have to choose what to watch. Idea for you: turning saved content into &quot;lean-back&quot; channels works with any curated list.</div></div><div class="thumb ph" style="--ph:173">H</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://hissingkitty.com/hacker-churn" data-title="HackerChurn" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://hissingkitty.com/hacker-churn" target="_blank" rel="noopener">HackerChurn</a></h3><div class="meta">hissingkitty.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50353386" target="_blank" rel="noopener">HN</a>): shows which SaaS tools HN users want to cancel. Problem: it is hard to find honest signals about a product. Idea for you: collecting opinions from public discussions can become a useful dataset.</div></div><a class="thumb" href="https://hissingkitty.com/hacker-churn" target="_blank" rel="noopener"><img src="img/680c37f0e49da1db.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://hjkl.duy.run" data-title="hjkl, a Vim practice game" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-04" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://hjkl.duy.run" target="_blank" rel="noopener">hjkl, a Vim practice game</a></h3><div class="meta">hjkl.duy.run</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50347552" target="_blank" rel="noopener">HN</a>): a small browser game for learning Vim commands. Problem: drills are boring. Idea for you: a game makes a hard developer skill fun to learn. The same idea could work for git, regex or shell commands.</div></div><a class="thumb" href="https://hjkl.duy.run" target="_blank" rel="noopener"><img src="img/ad9892460718a2eb.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Take one slow query from your Node backend. Run plain <code>EXPLAIN</code> first, then <code>EXPLAIN ANALYZE</code> only where it is safe, because it really runs the query. Read the plan from the leaves up to the root. Look for nodes where the estimated rows and the real rows are very different. Guide: <a href="https://dev.to/database-engineering/how-to-read-postgresql-explain-output-4bhd" target="_blank" rel="noopener">How to read PostgreSQL EXPLAIN output</a>.</div></section></main>
+<footer><span>source: ../20261104-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>

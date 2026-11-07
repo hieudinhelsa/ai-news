@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-09-07</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-09-06.html" data-next="2026-09-08.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-09-06.html">&#9664; 2026-09-06</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-09-07</a></h1>
+<a class="nav" href="2026-09-08.html">2026-09-08 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/jimtt/i-got-tired-of-re-recording-broken-tests-so-i-built-my-own-testing-tool-1h44" data-title="I got tired of re-recording broken tests, so I built my own testing tool" data-source="" data-section="Top 3 (must read)" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/jimtt/i-got-tired-of-re-recording-broken-tests-so-i-built-my-own-testing-tool-1h44" target="_blank" rel="noopener">I got tired of re-recording broken tests, so I built my own testing tool</a></h3><div class="meta">dev.to</div><div class="body">A developer spent two sprints in a row fixing recorded UI tests instead of shipping features. A checkout-flow test that broke on a small change was the last straw, so they built CueCast, a no-code web UI testing tool, and share what went wrong along the way. Why it matters: this is the exact pain of brittle E2E suites. Good input for your own Playwright and Maestro test strategy, and a small indie build story on top.</div></div><a class="thumb" href="https://dev.to/jimtt/i-got-tired-of-re-recording-broken-tests-so-i-built-my-own-testing-tool-1h44" target="_blank" rel="noopener"><img src="img/91f48c08c3baf6dd.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/" data-title="There&#x27;s No Limit to How Bad Code Can Get" data-source="" data-section="Top 3 (must read)" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/" target="_blank" rel="noopener">There&#x27;s No Limit to How Bad Code Can Get</a></h3><div class="meta">simonwillison.net</div><div class="body">Zach Kehs argues that unlike a building, software has no natural limit. There can always be one more layer of indirection or one more slowdown. Simon Willison adds from experience that &quot;burn it down and rewrite&quot; almost never works once technical debt feels overwhelming. Why it matters: a short, sharp argument to bring to the next &quot;should we rewrite this?&quot; discussion with your team.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/" data-title="Research acceleration: The view inside OpenAI" data-source="" data-section="Top 3 (must read)" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/" target="_blank" rel="noopener">Research acceleration: The view inside OpenAI</a></h3><div class="meta">simonwillison.net</div><div class="body">OpenAI published a piece on how it uses its own models to speed up research work inside the company, together with an essay from its Chief Scientist on &quot;recursive self-improvement&quot;. Simon Willison reads both and points out what they do and do not explain. Why it matters: a first-hand look at how a frontier lab has its own engineers and researchers work with AI agents day to day. Useful as a reference point when you plan AI adoption for your team.</div></div><a class="thumb" href="https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/" target="_blank" rel="noopener"><img src="img/4f8847a860050aac.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/galih_putroaji/why-we-dumped-swagger-ui-for-scalar-in-our-go-backend-1bfp" data-title="Why We Dumped Swagger UI for Scalar in Our Go Backend" data-source="" data-section="Tools &amp; releases" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/galih_putroaji/why-we-dumped-swagger-ui-for-scalar-in-our-go-backend-1bfp" target="_blank" rel="noopener">Why We Dumped Swagger UI for Scalar in Our Go Backend</a></h3><div class="meta">dev.to</div><div class="body">a team replaced Swagger UI with Scalar for their OpenAPI docs. Scalar works from the same OpenAPI spec, so the same swap applies to Node.js APIs.</div></div><a class="thumb" href="https://dev.to/galih_putroaji/why-we-dumped-swagger-ui-for-scalar-in-our-go-backend-1bfp" target="_blank" rel="noopener"><img src="img/fa0fabf5da02322e.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://github.com/marsbos/mador" data-title="Show HN: Mador – Make any DOM reactive with a tiny 80-line Proxy state tuple" data-source="" data-section="Tools &amp; releases" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/marsbos/mador" target="_blank" rel="noopener">Show HN: Mador – Make any DOM reactive with a tiny 80-line Proxy state tuple</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49590738" target="_blank" rel="noopener">discussion</a>) — a very small library that uses a JavaScript Proxy to make plain DOM reactive. Nice for understanding how reactivity works under frameworks like React.</div></div><a class="thumb" href="https://github.com/marsbos/mador" target="_blank" rel="noopener"><img src="img/6837118d1bcf261a.png" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/" data-title="There&#x27;s No Limit to How Bad Code Can Get" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/" target="_blank" rel="noopener">There&#x27;s No Limit to How Bad Code Can Get</a></h3><div class="meta">simonwillison.net</div><div class="body">see Top 3. Simon&#x27;s point: the rewrite team gets pulled back onto the old system, and the new one never catches up.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://dev.to/joshua_ajibade/resilient-fintech-microservices-high-throughput-with-net-10-and-apache-kafka-5fak" data-title="Resilient Fintech Microservices: High-Throughput with .NET 10 and Apache Kafka" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/joshua_ajibade/resilient-fintech-microservices-high-throughput-with-net-10-and-apache-kafka-5fak" target="_blank" rel="noopener">Resilient Fintech Microservices: High-Throughput with .NET 10 and Apache Kafka</a></h3><div class="meta">dev.to</div><div class="body">a walk-through of moving loan and transaction flows from synchronous calls to Kafka messaging, so message loss or timeouts do not cause duplicate charges. The stack is .NET, but the design lessons apply to any Node.js backend.</div></div><a class="thumb" href="https://dev.to/joshua_ajibade/resilient-fintech-microservices-high-throughput-with-net-10-and-apache-kafka-5fak" target="_blank" rel="noopener"><img src="img/f09d1a1be7951c12.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>Automation testing:</strong> the CueCast story (Top 3) is a direct match. The core lesson is that recorded tests break on small UI changes, so test design matters more than tooling.</div><div class="para" style="--h:130"><strong>Node.js APIs:</strong> the Scalar article. If your services already expose an OpenAPI spec, switching the docs UI is a one-hour change.</div><div class="para" style="--h:130"><strong>Web frontend:</strong> Mador is a good 80-line read to explain Proxy-based reactivity to the team.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/scastiel/kado" data-title="Kadō – open-source habit tracker with a non-binary habit score, for iOS" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/scastiel/kado" target="_blank" rel="noopener">Kadō – open-source habit tracker with a non-binary habit score, for iOS</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49586902" target="_blank" rel="noopener">discussion</a>) — a habit tracker where a habit is not just &quot;done or missed&quot;. It scores partial progress. The user problem: most trackers punish one missed day and people quit. Good example of one small idea that makes a crowded category feel fresh. Worth studying as a Flutter side-project shape.</div></div><a class="thumb" href="https://github.com/scastiel/kado" target="_blank" rel="noopener"><img src="img/8ddfb98b6861e574.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://getvodforge.com/" data-title="VODForge – a free local desktop UI for YouTube video/playlist downloads" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://getvodforge.com/" target="_blank" rel="noopener">VODForge – a free local desktop UI for YouTube video/playlist downloads</a></h3><div class="meta">getvodforge.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49590354" target="_blank" rel="noopener">discussion</a>) — a desktop wrapper that puts a simple UI on top of command-line download tools. The user problem: powerful CLI tools that non-technical people cannot use. A &quot;wrap a CLI in a friendly UI&quot; pattern you can reuse for many tools.</div></div><a class="thumb" href="https://getvodforge.com/" target="_blank" rel="noopener"><img src="img/768176aedba84e7d.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/FulltimeFeline/Sol" data-title="Sol, a macOS music player and jukebox app, now free and open source" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-07" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/FulltimeFeline/Sol" target="_blank" rel="noopener">Sol, a macOS music player and jukebox app, now free and open source</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49590524" target="_blank" rel="noopener">discussion</a>) — a local music player and jukebox for people who own their music files and do not want a streaming service. Shows there is still room for focused, single-platform desktop apps with a clear audience.</div></div><div class="thumb ph" style="--ph:284">G</div></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Take one Node.js service that already has an OpenAPI spec and point <a href="https://dev.to/galih_putroaji/why-we-dumped-swagger-ui-for-scalar-in-our-go-backend-1bfp" target="_blank" rel="noopener">Scalar</a> at it instead of Swagger UI. It is a small, low-risk change, and you can judge in one afternoon whether the nicer docs are worth rolling out to other services.</div></section></main>
+<footer><span>source: ../20260907-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>

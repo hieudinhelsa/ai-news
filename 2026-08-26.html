@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-08-26</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-08-25.html" data-next="2026-08-27.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-08-25.html">&#9664; 2026-08-25</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-08-26</a></h1>
+<a class="nav" href="2026-08-27.html">2026-08-27 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/" data-title="How to evaluate LLMs before production" data-source="" data-section="Top 3 (must read)" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/" target="_blank" rel="noopener">How to evaluate LLMs before production</a></h3><div class="meta">github.blog</div><div class="body">GitHub shares the lessons they learned while evaluating LLMs for real-world secret scanning, before shipping anything to users. It is a practical look at building an eval process instead of trusting vibes. <em>Why it matters:</em> as an EM whose teams adopt AI, this is a ready template for how to test AI features before they reach production.</div></div><a class="thumb" href="https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/" target="_blank" rel="noopener"><img src="img/7414ec6882716a03.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/" data-title="EVE Online: The Move to Python 3 Begins!" data-source="" data-section="Top 3 (must read)" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/" target="_blank" rel="noopener">EVE Online: The Move to Python 3 Begins!</a></h3><div class="meta">simonwillison.net</div><div class="body">EVE Online has run on Stackless Python since 2003, with its last major upgrade 16 years ago, and is now starting the move to Python 3. It is one of the best long-running case studies of a huge legacy migration at scale. <em>Why it matters:</em> a concrete story about paying down 20 years of tech debt in a live system — useful thinking material for any delivery and migration planning you do.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/how-to-steal-an-ai-models-private" data-title="How to Steal an AI Model&#x27;s Private Thoughts" data-source="" data-section="Top 3 (must read)" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/how-to-steal-an-ai-models-private" target="_blank" rel="noopener">How to Steal an AI Model&#x27;s Private Thoughts</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">Researchers tested whether the encrypted reasoning blocks that Anthropic, OpenAI, and Google return to API clients actually keep that reasoning private. The answer has direct security implications for apps built on these APIs. <em>Why it matters:</em> if your teams build on LLM APIs, this changes what you should assume about what data those responses can leak.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/how-to-steal-an-ai-models-private" target="_blank" rel="noopener"><img src="img/89e99ce3e5807c60.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/mryadavgulshan/vector-database-vs-knowledge-graph-choosing-your-llm-store-4me5" data-title="Vector Database vs Knowledge Graph: Choosing Your LLM Store" data-source="" data-section="AI for developers" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/mryadavgulshan/vector-database-vs-knowledge-graph-choosing-your-llm-store-4me5" target="_blank" rel="noopener">Vector Database vs Knowledge Graph: Choosing Your LLM Store</a></h3><div class="meta">dev.to</div><div class="body">a field guide comparing the two storage options behind LLM apps, scored on retrieval, reasoning, and cost, with a real client example of &quot;almost right&quot; answers from vector search alone.</div></div><a class="thumb" href="https://dev.to/mryadavgulshan/vector-database-vs-knowledge-graph-choosing-your-llm-store-4me5" target="_blank" rel="noopener"><img src="img/c20ac14786de77e3.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/aws-builders/what-bedrock-agentcore-actually-puts-on-your-a2a-agent-card-1h34" data-title="What Bedrock AgentCore Actually Puts on Your A2A Agent Card" data-source="" data-section="AI for developers" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/aws-builders/what-bedrock-agentcore-actually-puts-on-your-a2a-agent-card-1h34" target="_blank" rel="noopener">What Bedrock AgentCore Actually Puts on Your A2A Agent Card</a></h3><div class="meta">dev.to</div><div class="body">field-by-field comparison of the A2A agent card the same agent publishes on AWS Bedrock AgentCore, Google Cloud Run, and Azure Container Apps. Useful if you follow the agent-to-agent protocol space.</div></div><a class="thumb" href="https://dev.to/aws-builders/what-bedrock-agentcore-actually-puts-on-your-a2a-agent-card-1h34" target="_blank" rel="noopener"><img src="img/1b9f030ae19f96f3.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/08/25/the-lazy-developers-guide-to-observing-your-own-code/" data-title="The lazy developer&#x27;s guide to observing your own code" data-source="" data-section="Engineering &amp; teams" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/08/25/the-lazy-developers-guide-to-observing-your-own-code/" target="_blank" rel="noopener">The lazy developer&#x27;s guide to observing your own code</a></h3><div class="meta">cncf.io</div><div class="body">CNCF on &quot;shift left&quot; for observability: how developers can instrument their own code with low effort instead of leaving it to ops.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/08/25/the-lazy-developers-guide-to-observing-your-own-code/" target="_blank" rel="noopener"><img src="img/772da2eeaffc9812.png" alt="" loading="lazy"></a></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/08/25/stop-trying-to-learn-all-of-kubernetes-at-once/" data-title="Stop trying to learn all of Kubernetes at once" data-source="" data-section="Engineering &amp; teams" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/08/25/stop-trying-to-learn-all-of-kubernetes-at-once/" target="_blank" rel="noopener">Stop trying to learn all of Kubernetes at once</a></h3><div class="meta">cncf.io</div><div class="body">a former VMware architect&#x27;s advice on learning Kubernetes in stages. Good link to hand to team members who are new to K8s.</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/08/25/stop-trying-to-learn-all-of-kubernetes-at-once/" target="_blank" rel="noopener"><img src="img/ca604985cbed19fe.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130">Thin day for your core stack — no Node.js, React, Flutter, or testing-tool news made the cut. The closest fits are the GitHub LLM-eval post (a process your teams can copy when adding AI features) and the CNCF observability piece (a low-friction practice to push in code review).</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vy5su5/reddit_designed_my_apps_next_two_games_on_monday/" data-title="Pit Stop — road-trip games at every US interstate exit" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vy5su5/reddit_designed_my_apps_next_two_games_on_monday/" target="_blank" rel="noopener">Pit Stop — road-trip games at every US interstate exit</a></h3><div class="meta">reddit.com</div><div class="body">a $1.99 app that maps every business at all 19,675 US interstate exits and runs Jackbox-style multiplayer car games with CarPlay as the scoreboard. The builder asked r/daddit for game ideas Monday, shipped them Monday night, and hit #6 in paid Travel Tuesday. Great example of using a community as a live product-design loop.</div></div><div class="thumb ph" style="--ph:251">R</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vxswko/ovid_a_bilingual_reader_with_3d_bookshelf/" data-title="Ovid — a bilingual reader with a 3D bookshelf" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vxswko/ovid_a_bilingual_reader_with_3d_bookshelf/" target="_blank" rel="noopener">Ovid — a bilingual reader with a 3D bookshelf</a></h3><div class="meta">reddit.com</div><div class="body">side-by-side reading in two languages, wrapped in a playful 3D shelf UI. Language learning through reading is close to your day job at ELSA; worth a look at how an indie approaches it.</div></div><div class="thumb ph" style="--ph:251">R</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/dragthelake/ambient-context" data-title="Ambient-context — screen memory without screenshots" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/dragthelake/ambient-context" target="_blank" rel="noopener">Ambient-context — screen memory without screenshots</a></h3><div class="meta">github.com</div><div class="body">records what you saw on screen as plain text/Markdown instead of images. Solves the &quot;what was that thing I read earlier?&quot; problem without the privacy and storage cost of screenshot-based recall tools.</div></div><a class="thumb" href="https://github.com/dragthelake/ambient-context" target="_blank" rel="noopener"><img src="img/4762f50065dc0360.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/jeffhajewski/latticedb" data-title="LatticeDB — like SQLite but for graph databases" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/jeffhajewski/latticedb" target="_blank" rel="noopener">LatticeDB — like SQLite but for graph databases</a></h3><div class="meta">github.com</div><div class="body">an embedded, zero-server graph database. The user problem: graph queries today usually require running a heavy database server; this makes them a local file, like SQLite did for SQL.</div></div><a class="thumb" href="https://github.com/jeffhajewski/latticedb" target="_blank" rel="noopener"><img src="img/b7598d97e9ed672b.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.reddit.com/r/SideProject/comments/1vy74tu/i_got_my_first_paying_customer/" data-title="MentionGPT — first paying customer at $16" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-08-26" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.reddit.com/r/SideProject/comments/1vy74tu/i_got_my_first_paying_customer/" target="_blank" rel="noopener">MentionGPT — first paying customer at $16</a></h3><div class="meta">reddit.com</div><div class="body">finds Reddit/X threads where people ask for recommendations so you can promote your product there. Simple problem, fast path to first revenue — a nice reminder that distribution tools sell.</div></div><div class="thumb ph" style="--ph:251">R</div></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Spin up <a href="https://github.com/leodeim/vpsmon" target="_blank" rel="noopener">vpsmon</a>, a lightweight Go system monitor for Linux VPS boxes — a five-minute install if you have any small servers or side-project hosts you currently check by SSH-ing in and running <code>top</code>.</div></section></main>
+<footer><span>source: ../20260826-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
