@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-10-17</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-10-16.html" data-next="2026-10-18.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-10-16.html">&#9664; 2026-10-16</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-10-17</a></h1>
+<a class="nav" href="2026-10-18.html">2026-10-18 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://claude.dev/blog/solving-code-review-at-anthropic/" data-title="How the Claude Code team does code review" data-source="" data-section="Top 3 (must read)" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener">How the Claude Code team does code review</a></h3><div class="meta">claude.dev</div><div class="body">The Claude Code team says &quot;did a human read the code?&quot; is not the right question. The better question is &quot;what could go wrong with this change, and which check, automated or human, should catch it?&quot; Review also moved from a gate at the end (open a PR, wait for a colleague) to something that runs all the time while you write, &quot;more like spellcheck&quot;. Simon Willison <a href="https://simonwillison.net/2026/Oct/16/code-review/" target="_blank" rel="noopener">quoted it too</a>, and the <a href="https://news.ycombinator.com/item?id=50122951" target="_blank" rel="noopener">HN thread</a> has 241 comments. <em>Why it matters:</em> As an EM, you can use this to rethink your team&#x27;s review rules now that AI writes more of the code.</div></div><a class="thumb" href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener"><img src="img/9a7394432446bffe.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/toolpilotpro/gpt-4o-is-retiring-from-the-api-what-to-do-before-january-14-2027-29kd" data-title="GPT-4o Is Retiring From the API: What to Do Before January 14, 2027" data-source="" data-section="Top 3 (must read)" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/toolpilotpro/gpt-4o-is-retiring-from-the-api-what-to-do-before-january-14-2027-29kd" target="_blank" rel="noopener">GPT-4o Is Retiring From the API: What to Do Before January 14, 2027</a></h3><div class="meta">dev.to</div><div class="body">On October 14, 2026, OpenAI told developers that GPT-4o, GPT-4o mini, GPT-4.1 and GPT-4.1 mini will leave the API on January 14, 2027. Any code that still calls these models will break on that date. <em>Why it matters:</em> Search your services and scripts for these model names now, so you can plan the move inside the next 3 months.</div></div><a class="thumb" href="https://dev.to/toolpilotpro/gpt-4o-is-retiring-from-the-api-what-to-do-before-january-14-2027-29kd" target="_blank" rel="noopener"><img src="img/8f9d0227da09f015.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" data-title="Building a Zendesk replacement with AI: 24 checks and 21 spec gaps" data-source="" data-section="Top 3 (must read)" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" target="_blank" rel="noopener">Building a Zendesk replacement with AI: 24 checks and 21 spec gaps</a></h3><div class="meta">dev.to</div><div class="body">A team gave Claude a help-desk blueprint and four phase prompts, in order. The final build passed 24 of 24 acceptance checks in one browser run on a fresh database, with 64 automated tests, and it handles tickets from email and a web form. The title also says they found 21 spec gaps along the way. <em>Why it matters:</em> It shows a concrete way to make AI builds safer. You write acceptance checks first, then let the agent build until they pass.</div></div><a class="thumb" href="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" target="_blank" rel="noopener"><img src="img/ef9f4dade921a3ac.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://www.cncf.io/blog/2026/10/16/deploying-maintaining-and-migrating-production-n8n-on-eks/" data-title="Deploying, maintaining, and migrating production n8n on EKS" data-source="" data-section="Tools &amp; releases" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.cncf.io/blog/2026/10/16/deploying-maintaining-and-migrating-production-n8n-on-eks/" target="_blank" rel="noopener">Deploying, maintaining, and migrating production n8n on EKS</a></h3><div class="meta">cncf.io</div><div class="body">. One container with SQLite is fine for a demo. Production needs workers, webhook processors, PostgreSQL and Redis on Kubernetes. (EKS = Amazon&#x27;s managed Kubernetes service.)</div></div><a class="thumb" href="https://www.cncf.io/blog/2026/10/16/deploying-maintaining-and-migrating-production-n8n-on-eks/" target="_blank" rel="noopener"><img src="img/bf56626fb794eec6.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://dev.to/khalidabdullahh/building-a-real-time-quant-trading-terminal-in-the-browser-without-react-frame-drops-3eca" data-title="Building a Real-Time Quant Trading Terminal in the Browser (Without React Frame Drops)" data-source="" data-section="Tools &amp; releases" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/khalidabdullahh/building-a-real-time-quant-trading-terminal-in-the-browser-without-react-frame-drops-3eca" target="_blank" rel="noopener">Building a Real-Time Quant Trading Terminal in the Browser (Without React Frame Drops)</a></h3><div class="meta">dev.to</div><div class="body">. A WebSocket stream can send 200–500 events per second. If each one updates React state (useState), the main thread chokes. The post shows how to avoid this.</div></div><a class="thumb" href="https://dev.to/khalidabdullahh/building-a-real-time-quant-trading-terminal-in-the-browser-without-react-frame-drops-3eca" target="_blank" rel="noopener"><img src="img/b423e540ac02302a.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://claude.dev/blog/solving-code-review-at-anthropic/" data-title="How the Claude Code team does code review" data-source="" data-section="AI for developers" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener">How the Claude Code team does code review</a></h3><div class="meta">claude.dev</div><div class="body">. Continuous, risk-based review instead of one human gate at the end (see Top 3).</div></div><a class="thumb" href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener"><img src="img/9a7394432446bffe.png" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/toolpilotpro/gpt-4o-is-retiring-from-the-api-what-to-do-before-january-14-2027-29kd" data-title="GPT-4o retiring from the API on January 14, 2027" data-source="" data-section="AI for developers" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/toolpilotpro/gpt-4o-is-retiring-from-the-api-what-to-do-before-january-14-2027-29kd" target="_blank" rel="noopener">GPT-4o retiring from the API on January 14, 2027</a></h3><div class="meta">dev.to</div><div class="body">. This is a migration deadline for any product that calls OpenAI (see Top 3).</div></div><a class="thumb" href="https://dev.to/toolpilotpro/gpt-4o-is-retiring-from-the-api-what-to-do-before-january-14-2027-29kd" target="_blank" rel="noopener"><img src="img/8f9d0227da09f015.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/omayrashraf/aws-context-how-knowledge-graphs-give-ai-agents-governed-enterprise-context-515f" data-title="AWS Context: How Knowledge Graphs Give AI Agents Governed Enterprise Context" data-source="" data-section="AI for developers" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/omayrashraf/aws-context-how-knowledge-graphs-give-ai-agents-governed-enterprise-context-515f" target="_blank" rel="noopener">AWS Context: How Knowledge Graphs Give AI Agents Governed Enterprise Context</a></h3><div class="meta">dev.to</div><div class="body">. It uses knowledge graphs to give AI agents company context, with &quot;governed&quot; (controlled) access.</div></div><a class="thumb" href="https://dev.to/omayrashraf/aws-context-how-knowledge-graphs-give-ai-agents-governed-enterprise-context-515f" target="_blank" rel="noopener"><img src="img/1a7a785eff6765f6.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://news.ycombinator.com/item?id=50121562" data-title="Anthropic Console overcharged my card 100x due to internationalization input bug" data-source="" data-section="Engineering &amp; teams" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://news.ycombinator.com/item?id=50121562" target="_blank" rel="noopener">Anthropic Console overcharged my card 100x due to internationalization input bug</a></h3><div class="meta">news.ycombinator.com</div><div class="body">. A user reports a 100x charge that they say came from an internationalization (i18n, meaning support for different languages and number formats) bug in an input field. It has 86 points on HN. It is a good reminder to test payment inputs with different locales.</div></div><div class="thumb ph" style="--ph:219">N</div></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" data-title="Building a Zendesk replacement with AI" data-source="" data-section="Engineering &amp; teams" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" target="_blank" rel="noopener">Building a Zendesk replacement with AI</a></h3><div class="meta">dev.to</div><div class="body">. Acceptance checks plus phase prompts are a delivery process your team could copy.</div></div><a class="thumb" href="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" target="_blank" rel="noopener"><img src="img/ef9f4dade921a3ac.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="card" style="--h:130"><button class="bm-btn" data-url="https://claude.dev/blog/solving-code-review-at-anthropic/" data-title="Claude Code team&#x27;s review approach" data-source="" data-section="For me" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener">Claude Code team&#x27;s review approach</a></h3><div class="meta">claude.dev</div><div class="body"><strong>Code review + AI (EM):</strong> the  speaks directly to how your team adopts AI.</div></div><a class="thumb" href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener"><img src="img/9a7394432446bffe.png" alt="" loading="lazy"></a></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" data-title="Zendesk build" data-source="" data-section="For me" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" target="_blank" rel="noopener">Zendesk build</a></h3><div class="meta">dev.to</div><div class="body"><strong>Testing:</strong> the  used 24 browser acceptance checks and 64 tests as the &quot;done&quot; signal for an AI agent.</div></div><a class="thumb" href="https://dev.to/samclaassen/building-a-zendesk-replacement-with-ai-24-checks-and-21-spec-gaps-4ef1" target="_blank" rel="noopener"><img src="img/ef9f4dade921a3ac.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/uzairxdev/building-an-ethiopian-calendar-in-flutter-4a4j" data-title="Building an Ethiopian Calendar in Flutter" data-source="" data-section="For me" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/uzairxdev/building-an-ethiopian-calendar-in-flutter-4a4j" target="_blank" rel="noopener">Building an Ethiopian Calendar in Flutter</a></h3><div class="meta">dev.to</div><div class="body"><strong>Flutter:</strong> . It is a 100% offline app with its own small calendar engine in Dart. It converts between calendars, tracks holidays, and stores fasting days. It is a nice example of offline-first design and date logic beyond the Gregorian calendar.</div></div><a class="thumb" href="https://dev.to/uzairxdev/building-an-ethiopian-calendar-in-flutter-4a4j" target="_blank" rel="noopener"><img src="img/7bb22fae0732d06e.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:130"><button class="bm-btn" data-url="https://dev.to/khalidabdullahh/building-a-real-time-quant-trading-terminal-in-the-browser-without-react-frame-drops-3eca" data-title="high-frequency WebSocket data without frame drops" data-source="" data-section="For me" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/khalidabdullahh/building-a-real-time-quant-trading-terminal-in-the-browser-without-react-frame-drops-3eca" target="_blank" rel="noopener">high-frequency WebSocket data without frame drops</a></h3><div class="meta">dev.to</div><div class="body"><strong>React performance:</strong> .</div></div><a class="thumb" href="https://dev.to/khalidabdullahh/building-a-real-time-quant-trading-terminal-in-the-browser-without-react-frame-drops-3eca" target="_blank" rel="noopener"><img src="img/b423e540ac02302a.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://stoke.money" data-title="Stoke Money" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://stoke.money" target="_blank" rel="noopener">Stoke Money</a></h3><div class="meta">stoke.money</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50122776" target="_blank" rel="noopener">HN</a>) is a personal finance app built around a cash flow forecast. Many budget apps only show where money went. This one shows where your money is going. <em>Inspiration:</em> you can make a crowded category new again by putting one view (the forecast) at the center.</div></div><a class="thumb" href="https://stoke.money" target="_blank" rel="noopener"><img src="img/4a21b55e02b2c696.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://onedeploy.co" data-title="OneDeploy" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://onedeploy.co" target="_blank" rel="noopener">OneDeploy</a></h3><div class="meta">onedeploy.co</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50119752" target="_blank" rel="noopener">HN</a>) offers managed hosting of open-source apps, with nightly backups and TLS. People want self-hosted tools without the work of running servers. <em>Inspiration:</em> you can sell &quot;the boring ops part&quot; around free software.</div></div><div class="thumb ph" style="--ph:325">O</div></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://rstation.ai/" data-title="rStation" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://rstation.ai/" target="_blank" rel="noopener">rStation</a></h3><div class="meta">rstation.ai</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50118876" target="_blank" rel="noopener">HN</a>) is a shared research lab for your AI agents. It is a place where several agents work on research together. <em>Inspiration:</em> new tools are appearing that coordinate many agents, not just one.</div></div><a class="thumb" href="https://rstation.ai/" target="_blank" rel="noopener"><img src="img/40223f2d740880d1.jpg" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://starskirmish.com/bench/v0-2/" data-title="Gemini 4 Argon plays StarCraft" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-10-17" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://starskirmish.com/bench/v0-2/" target="_blank" rel="noopener">Gemini 4 Argon plays StarCraft</a></h3><div class="meta">starskirmish.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=50118688" target="_blank" rel="noopener">HN</a>) uses a real-time strategy game as a test bed for AI models. It got 192 points. <em>Inspiration:</em> games can be a fun, visual way to show what a model can and cannot do.</div></div><a class="thumb" href="https://starskirmish.com/bench/v0-2/" target="_blank" rel="noopener"><img src="img/22d04cd04ff740d0.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">At your next team review sync, take 3 recent PRs. For each one, list &quot;what could go wrong&quot; and &quot;which check should catch it&quot; (lint, unit test, E2E, or a human). This follows the <a href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener">Claude Code team&#x27;s code review approach</a>. You will see where human review is really needed and where an automated check can do the job.</div></section></main>
+<footer><span>source: ../20261017-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
