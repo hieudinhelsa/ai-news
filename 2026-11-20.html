@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-11-20</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-11-19.html" data-next="">
+<div class="top"><div class="bar"><a class="nav" href="2026-11-19.html">&#9664; 2026-11-19</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-11-20</a></h1>
+<span class="nav off">none &#9654;</span></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/" data-title="The Pulse: What can we learn from the Railway hack?" data-source="" data-section="Top 3 (must read)" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/" target="_blank" rel="noopener">The Pulse: What can we learn from the Railway hack?</a></h3><div class="meta">blog.pragmaticengineer.com</div><div class="body">The cloud platform Railway was hacked and has now published a detailed postmortem (a write-up of what went wrong). The attacker probably used AI models with no safety limits, and Railway made its systems stronger because of the attack. <em>Why it matters:</em> This is a real case of AI-assisted attacks on cloud infrastructure. It is good input for your own SRE and security review with the team.</div></div><a class="thumb" href="https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/" target="_blank" rel="noopener"><img src="img/02e4a686fddfdcce.png" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Nov/19/postgresql-19/" data-title="PostgreSQL 19 Released" data-source="" data-section="Top 3 (must read)" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Nov/19/postgresql-19/" target="_blank" rel="noopener">PostgreSQL 19 Released</a></h3><div class="meta">simonwillison.net</div><div class="body">PostgreSQL 19 is out two months late. The main reason was the large number of security issues that AI tools found and reported. New features for API developers include <code>INSERT ... ON CONFLICT DO SELECT</code> (get-or-create in one statement), <code>WAIT FOR LSN</code> (read your own writes on a replica), <code>REPACK (CONCURRENTLY)</code> (remove bloat without downtime), JSON output from <code>COPY</code>, and faster foreign-key checks during bulk inserts. <em>Why it matters:</em> If your Node.js backends use Postgres, these features remove common workarounds such as get-or-create race conditions and stale reads from replicas.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/laolei/why-multi-agent-systems-get-more-expensive-routing-handoffs-and-quadratic-cost-5bpe" data-title="Why Multi-Agent Systems Get More Expensive — Routing, Handoffs, and Quadratic Cost" data-source="" data-section="Top 3 (must read)" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/laolei/why-multi-agent-systems-get-more-expensive-routing-handoffs-and-quadratic-cost-5bpe" target="_blank" rel="noopener">Why Multi-Agent Systems Get More Expensive — Routing, Handoffs, and Quadratic Cost</a></h3><div class="meta">dev.to</div><div class="body">In this example, a five-step agent workflow went from 750 to 18,000 overhead tokens. The only change was letting a model decide &quot;who goes next&quot;. The cost grows because every agent re-reads everything the agents before it said. <em>Why it matters:</em> Your teams are building with agents. This shows in simple numbers why the agent design can make the bill much bigger before any business logic changes.</div></div><a class="thumb" href="https://dev.to/laolei/why-multi-agent-systems-get-more-expensive-routing-handoffs-and-quadratic-cost-5bpe" target="_blank" rel="noopener"><img src="img/403e10baf2413fca.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://github.com/onlook-dev/onlook/" data-title="Launch HN: Onlook (YC W25)" data-source="" data-section="Tools &amp; releases" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/onlook-dev/onlook/" target="_blank" rel="noopener">Launch HN: Onlook (YC W25)</a></h3><div class="meta">github.com</div><div class="body">: an open-source developer tool for designers. It could help designers and frontend devs work together. (<a href="https://news.ycombinator.com/item?id=50562320" target="_blank" rel="noopener">HN discussion</a>)</div></div><a class="thumb" href="https://github.com/onlook-dev/onlook/" target="_blank" rel="noopener"><img src="img/5d7ae07855bb5adc.png" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://perishablepress.com/chrome-ai-wasting-much-bandwidth/" data-title="Chrome AI features wasting much bandwidth" data-source="" data-section="Tools &amp; releases" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://perishablepress.com/chrome-ai-wasting-much-bandwidth/" target="_blank" rel="noopener">Chrome AI features wasting much bandwidth</a></h3><div class="meta">perishablepress.com</div><div class="body">: a report that Chrome&#x27;s AI features use a lot of network data. Worth knowing if you build web apps for users on slow or metered connections. (<a href="https://news.ycombinator.com/item?id=50562636" target="_blank" rel="noopener">HN, 127 points</a>)</div></div><div class="thumb ph" style="--ph:191">P</div></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/" data-title="GitHub: Replica and the Open Source Accessibility Framework" data-source="" data-section="Tools &amp; releases" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/" target="_blank" rel="noopener">GitHub: Replica and the Open Source Accessibility Framework</a></h3><div class="meta">github.blog</div><div class="body">: two new open-source projects from GitHub for collaboration and accessibility.</div></div><a class="thumb" href="https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/" target="_blank" rel="noopener"><img src="img/1359fddbf69495ca.png" alt="" loading="lazy"></a></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/" data-title="Token fraud is here and it&#x27;s BAD" data-source="" data-section="AI for developers" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/" target="_blank" rel="noopener">Token fraud is here and it&#x27;s BAD</a></h3><div class="meta">simonwillison.net</div><div class="body">: Claire Vo (ChatPRD) talks about attackers abusing AI products to get LLM tokens they do not pay for. If you ship any feature that calls an LLM API, you need rate limits and abuse checks.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/ckomiya/why-my-ai-agents-dont-talk-to-each-other-the-vegapunk-pattern-4i49" data-title="Why my AI agents don&#x27;t talk to each other: the Vegapunk pattern" data-source="" data-section="AI for developers" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/ckomiya/why-my-ai-agents-dont-talk-to-each-other-the-vegapunk-pattern-4i49" target="_blank" rel="noopener">Why my AI agents don&#x27;t talk to each other: the Vegapunk pattern</a></h3><div class="meta">dev.to</div><div class="body">: a design where specialist agents share one memory store instead of sending messages to each other. It pairs well with the multi-agent cost article above.</div></div><a class="thumb" href="https://dev.to/ckomiya/why-my-ai-agents-dont-talk-to-each-other-the-vegapunk-pattern-4i49" target="_blank" rel="noopener"><img src="img/13dc2ff49037e24e.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/" data-title="What can we learn from the Railway hack?" data-source="" data-section="Engineering &amp; teams" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/" target="_blank" rel="noopener">What can we learn from the Railway hack?</a></h3><div class="meta">blog.pragmaticengineer.com</div><div class="body">: a postmortem you can use as a team reading for an incident-review session.</div></div><a class="thumb" href="https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/" target="_blank" rel="noopener"><img src="img/02e4a686fddfdcce.png" alt="" loading="lazy"></a></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://blog.bytebytego.com/p/the-invisible-systems-what-happens" data-title="The Invisible Systems: What Happens Between Services" data-source="" data-section="Engineering &amp; teams" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.bytebytego.com/p/the-invisible-systems-what-happens" target="_blank" rel="noopener">The Invisible Systems: What Happens Between Services</a></h3><div class="meta">blog.bytebytego.com</div><div class="body">: ByteByteGo explains the layer behind the &quot;arrows&quot; in architecture diagrams, meaning how services really talk to each other. Useful for distributed-systems design reviews.</div></div><a class="thumb" href="https://blog.bytebytego.com/p/the-invisible-systems-what-happens" target="_blank" rel="noopener"><img src="img/95d8985c63a3dd26.jpg" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>PostgreSQL 19</strong>: you can use <code>ON CONFLICT DO SELECT</code> and <code>WAIT FOR LSN</code> directly in Node.js API code.</div><div class="para" style="--h:130"><strong>Multi-agent cost math</strong>: use it when your team chooses between agent designs.</div><div class="para" style="--h:130"><strong>Railway hack</strong>: an SRE and security lesson for the team.</div><div class="para" style="--h:130">No items today on Flutter, Playwright, Maestro or E2E testing.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://cornholenews.news" data-title="Cornhole News" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://cornholenews.news" target="_blank" rel="noopener">Cornhole News</a></h3><div class="meta">cornholenews.news</div><div class="body">: a news site in the style of Hacker News, but for news from the US Midwest. Problem: regional news is spread across many small outlets and has no shared, community-ranked front page. Inspiration: the &quot;HN for X&quot; format can work for any region or niche community. (<a href="https://news.ycombinator.com/item?id=50561515" target="_blank" rel="noopener">194 points</a>)</div></div><a class="thumb" href="https://cornholenews.news" target="_blank" rel="noopener"><img src="img/59ee1db7d44b2359.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://foolscap.works/" data-title="Foolscap" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://foolscap.works/" target="_blank" rel="noopener">Foolscap</a></h3><div class="meta">foolscap.works</div><div class="body">: a writing app that reads your book but never writes text for you. Problem: writers want AI feedback without the AI taking over their voice. Inspiration: building an AI product that only assists is a clear selling point, and users discuss it a lot (84 comments). (<a href="https://news.ycombinator.com/item?id=50559749" target="_blank" rel="noopener">HN</a>)</div></div><a class="thumb" href="https://foolscap.works/" target="_blank" rel="noopener"><img src="img/766a6d9c43d6f6da.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://adeindex.com" data-title="ADE Index" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://adeindex.com" target="_blank" rel="noopener">ADE Index</a></h3><div class="meta">adeindex.com</div><div class="body">: a sourced and ranked list of 975 agentic coding tools. Problem: there are too many AI coding tools to compare. Inspiration: a curated, ranked directory is a simple app that becomes useful in a busy market. (<a href="https://news.ycombinator.com/item?id=50554973" target="_blank" rel="noopener">HN</a>)</div></div><a class="thumb" href="https://adeindex.com" target="_blank" rel="noopener"><img src="img/9990e2b9d473f59a.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://tabbyml.github.io/weight-space-playground/" data-title="Weight-space programming playground" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-11-20" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://tabbyml.github.io/weight-space-playground/" target="_blank" rel="noopener">Weight-space programming playground</a></h3><div class="meta">tabbyml.github.io</div><div class="body">: a WebGPU demo where you can watch &quot;weight-space programming&quot; happen live in the browser. Problem: ML ideas are hard to understand from papers alone. Inspiration: interactive browser demos are a strong way to teach hard topics. (<a href="https://news.ycombinator.com/item?id=50561436" target="_blank" rel="noopener">HN</a>)</div></div><a class="thumb" href="https://tabbyml.github.io/weight-space-playground/" target="_blank" rel="noopener"><img src="img/c5a788d7efb7df80.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Try PostgreSQL 19&#x27;s <strong><code>INSERT ... ON CONFLICT DO SELECT</code></strong> on one get-or-create endpoint in a Node.js service. One statement can replace the usual &quot;select, then insert, then retry on conflict&quot; code and its race condition (two requests creating the same row at the same time). See the <a href="https://simonwillison.net/2026/Nov/19/postgresql-19/" target="_blank" rel="noopener">release notes via Simon Willison</a> and the <a href="https://dev.to/thanawat_wonchai/fiiecchraihmain-postgresql-19-thiinakphathnaa-api-tngruu-205g" target="_blank" rel="noopener">feature summary for API devs</a>.</div></section></main>
+<footer><span>source: ../20261120-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
