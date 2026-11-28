@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev News Report — 2026-09-22</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#2d333b;
+  --fg:#c9d1d9; --dim:#8b949e; --link:#58a6ff; --mark:#3fb950;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fa; --panel:#fff; --panel2:#eef1f4; --border:#d0d7de;
+        --fg:#1f2328; --dim:#59636e; --link:#0969da; --mark:#1a7f37;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,'Segoe UI',sans-serif}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.9em}
+.top{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.bar{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;
+  font-family:var(--mono)}
+.bar h1{font-size:15px;margin:0;flex:1;text-align:center;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:.5px}
+.bar h1 .d{color:var(--mark)}
+.nav{padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:var(--panel);
+  font-size:13px;white-space:nowrap}
+.nav.off{opacity:.35;pointer-events:none}
+.secnav{max-width:980px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px}
+.secnav a{padding:3px 10px;border:1px solid var(--border);border-radius:99px;color:var(--dim)}
+.secnav a:hover{color:var(--fg);text-decoration:none;border-color:var(--dim)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.sec{margin:26px 0}
+.sec>h2{font-family:var(--mono);font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+  scroll-margin-top:96px}
+.sec>h2 .rule{flex:1;height:1px;background:linear-gradient(90deg,hsl(var(--h) 60% 50%/.7),transparent)}
+.card{position:relative;display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+  border-left:3px solid hsl(var(--h) 60% 50%);border-radius:8px;padding:14px;margin:10px 0}
+.card .txt{flex:1;min-width:0}
+.bm-btn{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;
+  font-size:18px;line-height:1;color:var(--dim);padding:2px 4px}
+.bm-btn:hover{color:#e3b341}
+.bm-btn.active{color:#e3b341}
+.card h3{margin:0 0 4px;font-size:15px;line-height:1.4}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-bottom:6px}
+.meta .src{color:hsl(var(--h) 55% 60%)}
+.body{font-size:14px;color:var(--fg)} .body em{color:var(--dim)}
+.thumb{flex:0 0 148px;height:96px;border-radius:6px;overflow:hidden;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph{font-family:var(--mono);font-size:34px;font-weight:700;
+  color:hsl(var(--ph) 55% 62%);background:hsl(var(--ph) 45% 50%/.12)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+a.day{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--fg)}
+a.day:hover{border-color:var(--dim);text-decoration:none;background:var(--panel2)}
+a.day.latest{border-color:var(--mark)}
+.day .dnum{font-family:var(--mono);font-size:20px;font-weight:700}
+.day .dow{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.day .cnt{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.para{background:var(--panel);border:1px solid var(--border);border-left:3px solid hsl(var(--h) 60% 50%);
+  border-radius:8px;padding:12px 14px;margin:10px 0;font-size:14px}
+.intro{color:var(--dim);font-style:italic}
+footer{max-width:980px;margin:0 auto;padding:16px;color:var(--dim);font-family:var(--mono);
+  font-size:12px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;
+  align-items:center}
+footer a, footer label{color:var(--link);cursor:pointer}
+kbd{border:1px solid var(--border);border-radius:4px;padding:0 5px;background:var(--panel)}
+.bm-empty{color:var(--dim);font-style:italic}
+@media (max-width:640px){.thumb{flex-basis:96px;height:72px}.bar h1 .t{display:none}}
+</style>
+</head>
+<body data-prev="2026-09-21.html" data-next="2026-09-23.html">
+<div class="top"><div class="bar"><a class="nav" href="2026-09-21.html">&#9664; 2026-09-21</a>
+<h1><span class="t">DEV NEWS</span> <a class="d" href="archive.html" title="All days">2026-09-22</a></h1>
+<a class="nav" href="2026-09-23.html">2026-09-23 &#9654;</a></div>
+<nav class="secnav"><a href="#top-3-must-read">🔥 Top 3 (must read)</a><a href="#tools-releases">🛠 Tools &amp; releases</a><a href="#ai-for-developers">🤖 AI for developers</a><a href="#engineering-teams">👔 Engineering &amp; teams</a><a href="#for-me">🎯 For me</a><a href="#app-ideas-indie-builds">💡 App ideas &amp; indie builds</a><a href="#try-this">🎓 Try this</a><a href="archive.html">&#128197; All days</a><a href="bookmarks.html">&#9733; Bookmarks</a></nav></div>
+<main><section class="sec" id="top-3-must-read"><h2 style="--h:8">🔥 Top 3 (must read)<span class="rule"></span></h2><div class="card" style="--h:8"><button class="bm-btn" data-url="https://linear.app/now/ci-bottleneck-reworked" data-title="AI coding has made CI a bottleneck, so we reworked ours to keep up" data-source="" data-section="Top 3 (must read)" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://linear.app/now/ci-bottleneck-reworked" target="_blank" rel="noopener">AI coding has made CI a bottleneck, so we reworked ours to keep up</a></h3><div class="meta">linear.app</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49792067" target="_blank" rel="noopener">HN discussion</a>) Linear says coding agents now open pull requests faster than their CI could check them, so the pipeline became the slowest part of delivery. They rebuilt CI around the new load, and the HN thread (164 comments) has many teams comparing notes on the same problem. Why it matters: if your team adopts Claude Code or Copilot at scale, CI and test speed become the delivery limit. This is an EM planning topic, not just a tooling one.</div></div><a class="thumb" href="https://linear.app/now/ci-bottleneck-reworked" target="_blank" rel="noopener"><img src="img/015dbc4f82687be4.avif" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://dev.to/rulestack/six-claudemd-files-six-codewords-three-at-launch-two-after-a-read-one-behind-an-env-var-cme" data-title="Six CLAUDE.md files, six codewords: three at launch, two after a Read, one behind an env var" data-source="" data-section="Top 3 (must read)" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/rulestack/six-claudemd-files-six-codewords-three-at-launch-two-after-a-read-one-behind-an-env-var-cme" target="_blank" rel="noopener">Six CLAUDE.md files, six codewords: three at launch, two after a Read, one behind an env var</a></h3><div class="meta">dev.to</div><div class="body">The author put a unique codeword in six CLAUDE.md files and checked which ones reached the model and when. Parent, working-directory, and CLAUDE.local.md files cost about 1,600 tokens each on the first request, subdirectory files loaded only after a Read below them, and the <code>--add-dir</code> file never loaded until an environment variable was set. Why it matters: you run Claude Code across many repos. Knowing what loads, when, and what it costs helps you write shared instructions that work and do not waste context.</div></div><a class="thumb" href="https://dev.to/rulestack/six-claudemd-files-six-codewords-three-at-launch-two-after-a-read-one-behind-an-env-var-cme" target="_blank" rel="noopener"><img src="img/2746c957fea9ceb8.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:8"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/" data-title="Cloudflare Python Workers are now generally available" data-source="" data-section="Top 3 (must read)" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/" target="_blank" rel="noopener">Cloudflare Python Workers are now generally available</a></h3><div class="meta">simonwillison.net</div><div class="body">(<a href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener">Cloudflare post</a>) After a two-year preview, Python is now a fully supported language on Cloudflare Workers. It runs Python compiled to WebAssembly through Pyodide inside the same V8 runtime that serves JavaScript Workers. Why it matters: many of your backend services are Python. This gives you an edge deployment option next to your Node.js Workers without a language switch.</div></div><div class="thumb ph" style="--ph:131">S</div></div></section><section class="sec" id="tools-releases"><h2 style="--h:212">🛠 Tools &amp; releases<span class="rule"></span></h2><div class="card" style="--h:212"><button class="bm-btn" data-url="https://blog.cloudflare.com/python-workers-ga/" data-title="Cloudflare Python Workers GA" data-source="" data-section="Tools &amp; releases" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener">Cloudflare Python Workers GA</a></h3><div class="meta">blog.cloudflare.com</div><div class="body">Python is a first-class Workers language now. Runs via Pyodide on V8.</div></div><a class="thumb" href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener"><img src="img/5a3a5fde415dc31e.png" alt="" loading="lazy"></a></div><div class="card" style="--h:212"><button class="bm-btn" data-url="https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/" data-title="Kubernetes v1.37: PVC last-used tracking (Beta)" data-source="" data-section="Tools &amp; releases" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/" target="_blank" rel="noopener">Kubernetes v1.37: PVC last-used tracking (Beta)</a></h3><div class="meta">kubernetes.io</div><div class="body">PVCs get an <code>Unused</code> condition, on by default. Makes finding orphaned volumes simple, no custom tooling needed.</div></div><div class="thumb ph" style="--ph:335">K</div></div></section><section class="sec" id="ai-for-developers"><h2 style="--h:268">🤖 AI for developers<span class="rule"></span></h2><div class="card" style="--h:268"><button class="bm-btn" data-url="https://simonwillison.net/2026/Sep/21/jev/" data-title="Jev introduces a new shape of LLM — &quot;decision models&quot;" data-source="" data-section="AI for developers" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://simonwillison.net/2026/Sep/21/jev/" target="_blank" rel="noopener">Jev introduces a new shape of LLM — &quot;decision models&quot;</a></h3><div class="meta">simonwillison.net</div><div class="body">takes text in, but returns a typed decision instead of text. A related <a href="https://dev.to/sreeni5018/jev-decides-openai-reasons-a-practical-hybrid-agent-architecture-4ol3" target="_blank" rel="noopener">hybrid architecture write-up</a> uses Jev for routing and a big model only for reasoning, to cut wasted LLM calls.</div></div><div class="thumb ph" style="--ph:131">S</div></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://dev.to/tokenlat/your-agents-cost-problem-isnt-the-model-its-the-steps-you-never-measured-38ag" data-title="Your agent&#x27;s cost problem isn&#x27;t the model. It&#x27;s the steps you never measured." data-source="" data-section="AI for developers" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/tokenlat/your-agents-cost-problem-isnt-the-model-its-the-steps-you-never-measured-38ag" target="_blank" rel="noopener">Your agent&#x27;s cost problem isn&#x27;t the model. It&#x27;s the steps you never measured.</a></h3><div class="meta">dev.to</div><div class="body">a pipeline burned a month of budget in 3 days. Tagging every token by (step, tool, model) showed trivial steps, not the frontier model, were the cost.</div></div><a class="thumb" href="https://dev.to/tokenlat/your-agents-cost-problem-isnt-the-model-its-the-steps-you-never-measured-38ag" target="_blank" rel="noopener"><img src="img/c5d57adf487bba0f.webp" alt="" loading="lazy"></a></div><div class="card" style="--h:268"><button class="bm-btn" data-url="https://status.claude.com/incidents/7g1qpkyz5gxh" data-title="Claude Status — elevated errors for multiple models" data-source="" data-section="AI for developers" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://status.claude.com/incidents/7g1qpkyz5gxh" target="_blank" rel="noopener">Claude Status — elevated errors for multiple models</a></h3><div class="meta">status.claude.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49795579" target="_blank" rel="noopener">HN</a>) — an incident affecting multiple models. Worth noting if your team depends on Claude Code for daily work.</div></div><a class="thumb" href="https://status.claude.com/incidents/7g1qpkyz5gxh" target="_blank" rel="noopener"><img src="img/06e38e5369b88f1b.png" alt="" loading="lazy"></a></div></section><section class="sec" id="engineering-teams"><h2 style="--h:174">👔 Engineering &amp; teams<span class="rule"></span></h2><div class="card" style="--h:174"><button class="bm-btn" data-url="https://linear.app/now/ci-bottleneck-reworked" data-title="Linear: CI as the new bottleneck" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://linear.app/now/ci-bottleneck-reworked" target="_blank" rel="noopener">Linear: CI as the new bottleneck</a></h3><div class="meta">linear.app</div><div class="body">when agents write code faster than CI checks it, the pipeline sets the pace of the team. See Top 3.</div></div><a class="thumb" href="https://linear.app/now/ci-bottleneck-reworked" target="_blank" rel="noopener"><img src="img/015dbc4f82687be4.avif" alt="" loading="lazy"></a></div><div class="card" style="--h:174"><button class="bm-btn" data-url="https://dev.to/alitron/nfs-storage-causes-io-issues-in-air-gapped-kubernetes-cluster-block-storage-with-posix-semantics-2o0l" data-title="NFS storage causes I/O issues in an air-gapped Kubernetes cluster" data-source="" data-section="Engineering &amp; teams" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://dev.to/alitron/nfs-storage-causes-io-issues-in-air-gapped-kubernetes-cluster-block-storage-with-posix-semantics-2o0l" target="_blank" rel="noopener">NFS storage causes I/O issues in an air-gapped Kubernetes cluster</a></h3><div class="meta">dev.to</div><div class="body">a 10-node self-managed cluster on NFS-only storage hit limits with I/O-heavy workloads. Case study on when you need block storage with POSIX semantics.</div></div><a class="thumb" href="https://dev.to/alitron/nfs-storage-causes-io-issues-in-air-gapped-kubernetes-cluster-block-storage-with-posix-semantics-2o0l" target="_blank" rel="noopener"><img src="img/9ad83692c2c633a3.webp" alt="" loading="lazy"></a></div></section><section class="sec" id="for-me"><h2 style="--h:130">🎯 For me<span class="rule"></span></h2><div class="para" style="--h:130"><strong>CI strategy:</strong> the Linear post is the strongest EM item today. Ask: how long does a PR wait for CI now, and what happens if PR volume doubles with agents?</div><div class="para" style="--h:130"><strong>Claude Code setup:</strong> the CLAUDE.md codeword test is directly useful for your multi-repo setup. Subdirectory files are free until touched, so repo-level instructions can be detailed without a token cost at launch.</div><div class="para" style="--h:130"><strong>Agent cost:</strong> the per-step token tagging idea applies to your own bots (news report, Slack bot). Cheap steps on expensive models add up.</div><div class="para" style="--h:130">Nothing new today for Flutter, React, Playwright, or Maestro.</div></section><section class="sec" id="app-ideas-indie-builds"><h2 style="--h:48">💡 App ideas &amp; indie builds<span class="rule"></span></h2><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/naw103/foremerge" data-title="Foremerge — catch intent conflicts between parallel coding agents" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/naw103/foremerge" target="_blank" rel="noopener">Foremerge — catch intent conflicts between parallel coding agents</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49789356" target="_blank" rel="noopener">HN</a>) — when several agents work on one repo at once, they can make changes that pass merge but conflict in intent. Foremerge detects that early. Problem: teams running many agents now hit a new kind of merge conflict. Inspiring because it is a small tool built for a pain that did not exist a year ago.</div></div><a class="thumb" href="https://github.com/naw103/foremerge" target="_blank" rel="noopener"><img src="img/74913b77197ea196.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/aru-labs/lossless-memory" data-title="Lossless-memory — a personal AI memory that never summarizes" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/aru-labs/lossless-memory" target="_blank" rel="noopener">Lossless-memory — a personal AI memory that never summarizes</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49786419" target="_blank" rel="noopener">HN</a>) — most AI memory systems compress old context and lose detail. This one keeps everything and retrieves instead. Problem: people do not trust summaries of their own notes. A good pattern if you build personal assistant tools.</div></div><a class="thumb" href="https://github.com/aru-labs/lossless-memory" target="_blank" rel="noopener"><img src="img/b3a6ebf575f99eec.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://www.kadoa.com/food-prices" data-title="A website that tracks US food prices every day" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://www.kadoa.com/food-prices" target="_blank" rel="noopener">A website that tracks US food prices every day</a></h3><div class="meta">kadoa.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49792076" target="_blank" rel="noopener">HN</a>) — daily scrape of grocery prices shown as trends. Problem: people feel prices rising but have no simple, daily data. Shows how a scraper plus a clean chart page can become a product on its own.</div></div><a class="thumb" href="https://www.kadoa.com/food-prices" target="_blank" rel="noopener"><img src="img/bfbffc0d079214a2.png" alt="" loading="lazy"></a></div><div class="card" style="--h:48"><button class="bm-btn" data-url="https://github.com/volotat/mini-AGI/" data-title="Mini-AGI — continual learning model trained on 8GB VRAM" data-source="" data-section="App ideas &amp; indie builds" data-report="2026-09-22" onclick="bmToggle(this)" title="Bookmark">&#9734;</button><div class="txt"><h3><a href="https://github.com/volotat/mini-AGI/" target="_blank" rel="noopener">Mini-AGI — continual learning model trained on 8GB VRAM</a></h3><div class="meta">github.com</div><div class="body">(<a href="https://news.ycombinator.com/item?id=49783133" target="_blank" rel="noopener">HN</a>) — a research toy: a model that keeps learning over time on a consumer GPU. Less of an app, more of a reminder that interesting ML side projects can run on cheap hardware.</div></div><a class="thumb" href="https://github.com/volotat/mini-AGI/" target="_blank" rel="noopener"><img src="img/d1b27e26fd9f4d42.png" alt="" loading="lazy"></a></div></section><section class="sec" id="try-this"><h2 style="--h:320">🎓 Try this<span class="rule"></span></h2><div class="para" style="--h:320">Run the CLAUDE.md codeword test on your own repo tree. Put a unique word in each CLAUDE.md (global, parent folder, repo, subfolder) and ask Claude Code which words it can see at launch and after reading a file in a subfolder. It takes 10 minutes and shows exactly what your setup loads and what it costs. Guide: <a href="https://dev.to/rulestack/six-claudemd-files-six-codewords-three-at-launch-two-after-a-read-one-behind-an-env-var-cme" target="_blank" rel="noopener">Six CLAUDE.md files, six codewords</a>.</div></section></main>
+<footer><span>source: ../20260922-AI-news-reports.md</span>
+<a href="#" onclick="bmExport();return false;">Export bookmarks.json</a>
+<label>Import<input type="file" accept="application/json" style="display:none" onchange="bmImportFile(this)"></label>
+<span><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> change day</span></footer>
+<script>
+document.addEventListener('keydown',function(e){
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var b=document.body;
+  if(e.key==='ArrowLeft'&&b.dataset.prev)location.href=b.dataset.prev;
+  if(e.key==='ArrowRight'&&b.dataset.next)location.href=b.dataset.next;
+});
+
+var BM_KEY='ai-news-bookmarks-v1';
+function bmLoad(){try{return JSON.parse(localStorage.getItem(BM_KEY)||'{}');}catch(e){return {};}}
+function bmSave(o){localStorage.setItem(BM_KEY,JSON.stringify(o));}
+function bmEsc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+function bmToggle(btn){
+  var url=btn.dataset.url, bm=bmLoad();
+  if(bm[url]){
+    delete bm[url]; btn.classList.remove('active'); btn.textContent='\u2606';
+  }else{
+    bm[url]={title:btn.dataset.title,url:url,source:btn.dataset.source,
+      section:btn.dataset.section,report:btn.dataset.report,
+      saved:new Date().toISOString().slice(0,10)};
+    btn.classList.add('active'); btn.textContent='\u2605';
+  }
+  bmSave(bm);
+  if(document.body.dataset.page==='bookmarks') bmRender();
+}
+function bmMarkAll(){
+  var bm=bmLoad();
+  document.querySelectorAll('.bm-btn').forEach(function(btn){
+    if(bm[btn.dataset.url]){btn.classList.add('active'); btn.textContent='\u2605';}
+  });
+}
+function bmExport(){
+  var bm=bmLoad();
+  var list=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  var blob=new Blob([JSON.stringify(list,null,2)+'\n'],{type:'application/json'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='bookmarks.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+function bmImportFile(input){
+  var f=input.files[0]; if(!f) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var list=JSON.parse(reader.result);
+      var bm=bmLoad();
+      list.forEach(function(it){ if(it && it.url) bm[it.url]=it; });
+      bmSave(bm); bmMarkAll();
+      if(document.body.dataset.page==='bookmarks') bmRender();
+      alert('Imported '+list.length+' bookmark(s).');
+    }catch(e){ alert('Could not read file: '+e.message); }
+  };
+  reader.readAsText(f);
+  input.value='';
+}
+function bmRender(){
+  var list=document.getElementById('bm-list');
+  if(!list) return;
+  var bm=bmLoad();
+  var items=Object.keys(bm).map(function(k){return bm[k];})
+    .sort(function(a,b){return (b.saved||'').localeCompare(a.saved||'');});
+  if(!items.length){
+    list.innerHTML='<p class="bm-empty">No bookmarks yet. Star an item on a report page.</p>';
+    return;
+  }
+  list.innerHTML=items.map(function(it){
+    var dom=''; try{ dom=new URL(it.url).hostname.replace(/^www\./,''); }catch(e){}
+    var meta=[it.source, dom, it.report?('from '+it.report):'', 'saved '+(it.saved||'')]
+      .filter(Boolean).join(' \u00b7 ');
+    return '<div class="card" style="--h:210"><div class="txt">'
+      +'<h3><a href="'+bmEsc(it.url)+'" target="_blank" rel="noopener">'+bmEsc(it.title)+'</a></h3>'
+      +'<div class="meta">'+bmEsc(meta)+'</div></div>'
+      +'<button class="bm-btn active" data-url="'+bmEsc(it.url)+'" onclick="bmToggle(this)" '
+      +'title="Remove bookmark">\u2605</button></div>';
+  }).join('');
+}
+bmMarkAll();
+bmRender();
+</script>
+</body></html>
